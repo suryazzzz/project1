@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +11,9 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet" />
   <script>
     tailwind.config = {
       theme: {
@@ -35,103 +38,325 @@
     }
   </script>
   <style>
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Lato', sans-serif; background-color: #FAF7F2; color: #2C1A0E; }
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #FAF7F2; }
-    ::-webkit-scrollbar-thumb { background: #C9972A; border-radius: 3px; }
+    * {
+      box-sizing: border-box;
+    }
 
-    .font-serif { font-family: 'Playfair Display', Georgia, serif; }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: #FAF7F2;
+      color: #2C1A0E;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #FAF7F2;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #C9972A;
+      border-radius: 3px;
+    }
+
+    .font-serif {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
 
     /* Hero background gradient overlay */
     .hero-overlay {
-      background: linear-gradient(135deg, rgba(107,26,42,0.78) 0%, rgba(44,26,14,0.55) 50%, rgba(201,151,42,0.35) 100%);
+      background: linear-gradient(135deg, rgba(107, 26, 42, 0.78) 0%, rgba(44, 26, 14, 0.55) 50%, rgba(201, 151, 42, 0.35) 100%);
     }
 
     /* Gold border glow */
-    .gold-border { border: 1.5px solid #C9972A; }
+    .gold-border {
+      border: 1.5px solid #C9972A;
+    }
 
     /* Product card hover */
-    .product-card { transition: box-shadow 0.3s ease, transform 0.2s ease; }
-    .product-card:hover { box-shadow: 0 12px 40px rgba(201,151,42,0.18); transform: translateY(-3px); }
-    .product-card .card-img { transition: transform 0.45s ease; overflow: hidden; }
-    .product-card:hover .card-img img { transform: scale(1.06); }
+    .product-card {
+      transition: box-shadow 0.3s ease, transform 0.2s ease;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 12px 40px rgba(201, 151, 42, 0.18);
+      transform: translateY(-3px);
+    }
+
+    .product-card .card-img {
+      transition: transform 0.45s ease;
+      overflow: hidden;
+    }
+
+    .product-card:hover .card-img img {
+      transform: scale(1.06);
+    }
 
     /* Badge styles */
-    .badge-new { background: #C9972A; color: #fff; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; padding: 2px 8px; border-radius: 2px; }
-    .badge-best { background: #6B1A2A; color: #fff; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; padding: 2px 8px; border-radius: 2px; }
-    .badge-sale { background: #E8B84B; color: #2C1A0E; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; padding: 2px 8px; border-radius: 2px; }
-    .badge-limited { background: #8B2139; color: #fff; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; padding: 2px 8px; border-radius: 2px; }
+    .badge-new {
+      background: #C9972A;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 2px 8px;
+      border-radius: 2px;
+    }
+
+    .badge-best {
+      background: #6B1A2A;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 2px 8px;
+      border-radius: 2px;
+    }
+
+    .badge-sale {
+      background: #E8B84B;
+      color: #2C1A0E;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 2px 8px;
+      border-radius: 2px;
+    }
+
+    .badge-limited {
+      background: #8B2139;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 2px 8px;
+      border-radius: 2px;
+    }
 
     /* Wishlist heart */
-    .wishlist-btn { transition: color 0.2s, transform 0.2s; }
-    .wishlist-btn:hover { transform: scale(1.2); }
-    .wishlist-active { color: #8B2139 !important; }
+    .wishlist-btn {
+      transition: color 0.2s, transform 0.2s;
+    }
+
+    .wishlist-btn:hover {
+      transform: scale(1.2);
+    }
+
+    .wishlist-active {
+      color: #8B2139 !important;
+    }
 
     /* Size button */
-    .size-btn { transition: all 0.15s; border: 1.5px solid #C9972A; color: #6B1A2A; font-weight: 600; font-size: 12px; padding: 4px 10px; border-radius: 3px; cursor: pointer; background: transparent; }
-    .size-btn:hover, .size-btn.selected { background: #6B1A2A; color: #FAF7F2; border-color: #6B1A2A; }
-    .size-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .size-btn {
+      transition: all 0.15s;
+      border: 1.5px solid #C9972A;
+      color: #6B1A2A;
+      font-weight: 600;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      background: transparent;
+    }
+
+    .size-btn:hover,
+    .size-btn.selected {
+      background: #6B1A2A;
+      color: #FAF7F2;
+      border-color: #6B1A2A;
+    }
+
+    .size-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
 
     /* Cart drawer */
-    .cart-drawer { transition: transform 0.35s cubic-bezier(.4,0,.2,1); }
-    .cart-open { transform: translateX(0); }
-    .cart-closed { transform: translateX(100%); }
+    .cart-drawer {
+      transition: transform 0.35s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    .cart-open {
+      transform: translateX(0);
+    }
+
+    .cart-closed {
+      transform: translateX(100%);
+    }
 
     /* Gold btn */
-    .btn-gold { background: linear-gradient(135deg, #C9972A, #E8B84B); color: #2C1A0E; font-weight: 700; letter-spacing: 0.06em; transition: opacity 0.2s, transform 0.15s; }
-    .btn-gold:hover { opacity: 0.92; transform: translateY(-1px); }
+    .btn-gold {
+      background: linear-gradient(135deg, #C9972A, #E8B84B);
+      color: #2C1A0E;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+
+    .btn-gold:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
 
     /* Maroon btn */
-    .btn-maroon { background: #6B1A2A; color: #FAF7F2; font-weight: 700; letter-spacing: 0.06em; transition: background 0.2s, transform 0.15s; }
-    .btn-maroon:hover { background: #8B2139; transform: translateY(-1px); }
+    .btn-maroon {
+      background: #6B1A2A;
+      color: #FAF7F2;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-maroon:hover {
+      background: #8B2139;
+      transform: translateY(-1px);
+    }
 
     /* Outline btn */
-    .btn-outline { border: 1.5px solid #C9972A; color: #6B1A2A; font-weight: 600; transition: all 0.2s; background: transparent; }
-    .btn-outline:hover { background: #6B1A2A; color: #FAF7F2; border-color: #6B1A2A; }
+    .btn-outline {
+      border: 1.5px solid #C9972A;
+      color: #6B1A2A;
+      font-weight: 600;
+      transition: all 0.2s;
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: #6B1A2A;
+      color: #FAF7F2;
+      border-color: #6B1A2A;
+    }
 
     /* Star rating */
-    .star { color: #C9972A; }
+    .star {
+      color: #C9972A;
+    }
 
     /* Filter checkbox */
-    input[type="checkbox"] { accent-color: #6B1A2A; }
+    input[type="checkbox"] {
+      accent-color: #6B1A2A;
+    }
 
     /* Overlay */
-    .overlay { background: rgba(44,26,14,0.55); }
+    .overlay {
+      background: rgba(44, 26, 14, 0.55);
+    }
 
     /* Smooth page fade */
-    .page-enter { animation: fadeIn 0.3s ease; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .page-enter {
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
     /* Newsletter input */
-    .nl-input:focus { outline: none; border-color: #C9972A; }
+    .nl-input:focus {
+      outline: none;
+      border-color: #C9972A;
+    }
 
     /* Range slider */
-    input[type="range"] { accent-color: #6B1A2A; }
+    input[type="range"] {
+      accent-color: #6B1A2A;
+    }
 
     /* Mobile menu */
-    .mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; }
+    .mobile-menu {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
 
     /* Sticky header */
-    .header-sticky { position: sticky; top: 0; z-index: 1000; }
+    .header-sticky {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
     /* Product image aspect ratio */
-    .aspect-product { aspect-ratio: 4/5; }
+    .aspect-product {
+      aspect-ratio: 4/5;
+    }
 
     /* Review card */
-    .review-card { border-left: 3px solid #C9972A; }
+    .review-card {
+      border-left: 3px solid #C9972A;
+    }
 
     /* Quantity btn */
-    .qty-btn { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border: 1.5px solid #D4C5A9; border-radius: 4px; cursor: pointer; background: transparent; transition: all 0.15s; font-weight: 700; color: #6B1A2A; }
-    .qty-btn:hover { background: #6B1A2A; color: #FAF7F2; border-color: #6B1A2A; }
+    .qty-btn {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1.5px solid #D4C5A9;
+      border-radius: 4px;
+      cursor: pointer;
+      background: transparent;
+      transition: all 0.15s;
+      font-weight: 700;
+      color: #6B1A2A;
+    }
+
+    .qty-btn:hover {
+      background: #6B1A2A;
+      color: #FAF7F2;
+      border-color: #6B1A2A;
+    }
 
     /* Toast */
-    .toast { position: fixed; bottom: 24px; right: 24px; z-index: 9999; background: #6B1A2A; color: #FAF7F2; padding: 12px 22px; border-radius: 6px; font-size: 14px; font-weight: 600; box-shadow: 0 4px 20px rgba(0,0,0,0.18); animation: slideUp 0.3s ease; }
-    @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      background: #6B1A2A;
+      color: #FAF7F2;
+      padding: 12px 22px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+      animation: slideUp 0.3s ease;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
     /* Hamburger */
-    .hamburger-line { display: block; width: 22px; height: 2px; background: #6B1A2A; margin: 4px 0; transition: all 0.3s; }
+    .hamburger-line {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #6B1A2A;
+      margin: 4px 0;
+      transition: all 0.3s;
+    }
 
     /* Hero image placeholder */
     .hero-bg {
@@ -139,1594 +364,1667 @@
       background-size: cover;
       background-position: center 20%;
     }
+
     .cat-saree-bg {
       background-image: url('./images/sarees/kanchipuram-silk.jpg'), url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&q=80');
-      background-size: cover; background-position: center;
+      background-size: cover;
+      background-position: center;
     }
+
     .cat-salwar-bg {
       background-image: url('./images/salwars/festive-designer.jpg'), url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&q=80');
-      background-size: cover; background-position: center top;
+      background-size: cover;
+      background-position: center top;
     }
+
     .offer-bg {
       background-image: url('./images/banners/hero-banner.jpg'), url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1400&q=80');
-      background-size: cover; background-position: center 30%;
+      background-size: cover;
+      background-position: center 30%;
     }
 
     /* Section divider */
-    .gold-divider { width: 60px; height: 2px; background: linear-gradient(90deg, #C9972A, #E8B84B); margin: 0 auto 1.5rem; }
+    .gold-divider {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, #C9972A, #E8B84B);
+      margin: 0 auto 1.5rem;
+    }
   </style>
 </head>
+
 <body>
 
-<div id="root"></div>
+  <div id="root"></div>
 
-<script type="text/babel">
-const { useState, useEffect, useRef, useCallback, useMemo } = React;
+  <script type="text/babel">
+    const { useState, useEffect, useRef, useCallback, useMemo } = React;
 
-/* ============================================================
-   PRODUCT DATA
-   ============================================================ */
-const FALLBACK_IMG = "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=600&auto=format&fit=crop&q=80";
-const handleImgError = (e) => {
-  if (e && e.currentTarget && e.currentTarget.src !== FALLBACK_IMG) {
-    e.currentTarget.src = FALLBACK_IMG;
-  }
-};
+    /* ============================================================
+       PRODUCT DATA
+       ============================================================ */
+    const FALLBACK_IMG = "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=600&auto=format&fit=crop&q=80";
+    const handleImgError = (e) => {
+      if (e && e.currentTarget && e.currentTarget.src !== FALLBACK_IMG) {
+        e.currentTarget.src = FALLBACK_IMG;
+      }
+    };
 
-const SAREES = [
+    const SAREES = [
+      {
+        id: 1, name: "Royal Blue Designer Silk Saree", category: "Sarees",
+        price: 2499, originalPrice: 3499, discount: 29,
+        images: [
+          "./images/sarees/royal-blue-saree.png",
+          "./images/sarees/royal-blue-saree.png"
+        ],
+        fabric: "Silk", color: "Royal Blue", pattern: "Zari Border & Floral Buttis",
+        occasion: "Wedding / Festive", length: "5.5 meters", blouse: "Gold Blouse Included",
+        description: "Exquisite royal blue silk saree adorned with delicate gold zari border embroidery, scattered floral buttis, and paired with an antique gold blouse piece.",
+        sizes: [], isNew: true, isBestSeller: true, rating: 4.9, reviews: 148, stock: 12
+      },
+      {
+        id: 2, name: "Magenta Fuchsia Embroidered Saree", category: "Sarees",
+        price: 2199, originalPrice: 2999, discount: 27,
+        images: [
+          "./images/sarees/magenta-pink-saree.png",
+          "./images/sarees/magenta-pink-saree.png"
+        ],
+        fabric: "Soft Silk / Organza", color: "Magenta Pink", pattern: "Scalloped Floral Border",
+        occasion: "Party / Festive", length: "5.5 meters", blouse: "Included",
+        description: "Striking magenta fuchsia pink saree featuring handcrafted scalloped thread and zari embroidery along the border with delicate scattered motifs.",
+        sizes: [], isNew: true, isBestSeller: true, rating: 4.8, reviews: 112, stock: 10
+      },
+      {
+        id: 3, name: "Turquoise & Teal Ombre Saree", category: "Sarees",
+        price: 1899, originalPrice: 2499, discount: 24,
+        images: [
+          "./images/sarees/turquoise-teal-saree.png",
+          "./images/sarees/turquoise-teal-saree.png"
+        ],
+        fabric: "Georgette", color: "Turquoise Blue", pattern: "Dual-Tone Floral Embroidery",
+        occasion: "Reception / Party", length: "5.5 meters", blouse: "Deep Blue Included",
+        description: "Breathtaking dual-tone ombre transition from sky turquoise to deep ocean teal, finished with ornate floral border and hem embroidery.",
+        sizes: [], isNew: false, isBestSeller: true, rating: 4.7, reviews: 94, stock: 15
+      },
+      {
+        id: 4, name: "Chocolate Coffee Silk Saree", category: "Sarees",
+        price: 1999, originalPrice: 2699, discount: 26,
+        images: [
+          "./images/sarees/chocolate-brown-saree.png",
+          "./images/sarees/chocolate-brown-saree.png"
+        ],
+        fabric: "Soft Silk", color: "Chocolate Brown", pattern: "Pearl & Stone Border Work",
+        occasion: "Festive / Evening Wear", length: "5.5 meters", blouse: "Gold Blouse Included",
+        description: "Regal chocolate coffee brown silk saree embellished with fine stone and pearl border detailing and all-over floral buttis, styled with an antique gold blouse.",
+        sizes: [], isNew: true, isBestSeller: false, rating: 4.8, reviews: 86, stock: 8
+      },
+      {
+        id: 5, name: "Chiffon Designer Saree", category: "Sarees",
+        price: 1299, originalPrice: 1799, discount: 28,
+        images: [
+          "./images/sarees/chiffon-designer.jpg",
+          "./images/sarees/chiffon-designer.jpg"
+        ],
+        fabric: "Chiffon", color: "Teal Green", pattern: "Digital Print",
+        occasion: "Office / Casual / Party", length: "5.5 meters", blouse: "Included",
+        description: "Lightweight chiffon saree with a contemporary digital print. Flows gracefully and ideal for office or casual gatherings.",
+        sizes: [], isNew: false, isBestSeller: true, rating: 4.5, reviews: 155, stock: 20
+      },
+      {
+        id: 6, name: "Georgette Party Wear Saree", category: "Sarees",
+        price: 1599, originalPrice: 2199, discount: 27,
+        images: [
+          "./images/sarees/georgette-party.jpg",
+          "./images/sarees/georgette-party.jpg"
+        ],
+        fabric: "Georgette", color: "Rose Pink", pattern: "Sequin Work",
+        occasion: "Party / Reception", length: "5.5 meters", blouse: "Included",
+        description: "Glamorous georgette saree with sequin and stone work. The perfect choice for parties and evening receptions.",
+        sizes: [], isNew: false, isBestSeller: false, rating: 4.7, reviews: 88, stock: 5
+      }
+    ];
+
+    const SALWARS = [
+      {
+        id: 10, name: "Floral Printed Cotton Salwar Set", category: "Salwars",
+        price: 1199, originalPrice: 1599, discount: 25,
+        images: [
+          "./images/salwars/floral-cotton.jpg",
+          "./images/salwars/floral-cotton.jpg"
+        ],
+        fabric: "Cotton", color: "Pink", pattern: "Floral Print",
+        occasion: "Casual / Daily Wear", setIncludes: ["Kameez", "Salwar Bottom", "Dupatta"],
+        description: "Bright and comfortable floral printed cotton salwar set. Lightweight and breathable, perfect for daily wear.",
+        sizes: ["S", "M", "L", "XL", "XXL"], isNew: true, isBestSeller: false, rating: 4.5, reviews: 143, stock: 40
+      },
+      {
+        id: 11, name: "Embroidered Anarkali Salwar Set", category: "Salwars",
+        price: 1899, originalPrice: 2499, discount: 24,
+        images: [
+          "./images/salwars/embroidered-anarkali.jpg",
+          "./images/salwars/embroidered-anarkali.jpg"
+        ],
+        fabric: "Georgette", color: "Maroon", pattern: "Floral Embroidery",
+        occasion: "Festive / Party", setIncludes: ["Anarkali Kameez", "Salwar Bottom", "Dupatta"],
+        description: "Graceful Anarkali style salwar set with detailed embroidery work. Ideal for festive occasions and family functions.",
+        sizes: ["S", "M", "L", "XL", "XXL"], isNew: false, isBestSeller: true, rating: 4.8, reviews: 97, stock: 18
+      },
+      {
+        id: 12, name: "Straight Cut Printed Salwar Set", category: "Salwars",
+        price: 1299, originalPrice: 1699, discount: 24,
+        images: [
+          "./images/salwars/straight-cut.jpg",
+          "./images/salwars/straight-cut.jpg"
+        ],
+        fabric: "Rayon", color: "Sky Blue", pattern: "Geometric Print",
+        occasion: "Office / Casual", setIncludes: ["Kameez", "Salwar Bottom", "Dupatta"],
+        description: "Elegant straight-cut salwar set with contemporary geometric print. Versatile enough for office and casual outings.",
+        sizes: ["S", "M", "L", "XL", "XXL"], isNew: true, isBestSeller: false, rating: 4.4, reviews: 62, stock: 25
+      },
+      {
+        id: 13, name: "Festive Designer Salwar Set", category: "Salwars",
+        price: 2199, originalPrice: 2999, discount: 27,
+        images: [
+          "./images/salwars/festive-designer.jpg",
+          "./images/salwars/festive-designer.jpg"
+        ],
+        fabric: "Art Silk", color: "Golden Yellow", pattern: "Block Print",
+        occasion: "Wedding / Festive", setIncludes: ["Designer Kameez", "Palazzo Bottom", "Dupatta"],
+        description: "Regal festive designer salwar set with rich block print and golden embellishments. Perfect for weddings and grand celebrations.",
+        sizes: ["S", "M", "L", "XL", "XXL"], isNew: false, isBestSeller: true, rating: 4.9, reviews: 115, stock: 10
+      },
+      {
+        id: 14, name: "Cotton Daily Wear Salwar Set", category: "Salwars",
+        price: 899, originalPrice: 1199, discount: 25,
+        images: [
+          "./images/salwars/cotton-daily.jpg",
+          "./images/salwars/cotton-daily.jpg"
+        ],
+        fabric: "Cotton", color: "Olive Green", pattern: "Solid / Embroidered Neck",
+        occasion: "Daily Wear / Home", setIncludes: ["Kameez", "Salwar Bottom", "Dupatta"],
+        description: "Simple, comfortable pure cotton daily wear salwar set. Easy to maintain and perfect for everyday comfort.",
+        sizes: ["S", "M", "L", "XL", "XXL"], isNew: false, isBestSeller: false, rating: 4.3, reviews: 220, stock: 50
+      },
+      {
+        id: 15, name: "Premium Chanderi Salwar Set", category: "Salwars",
+        price: 1799, originalPrice: 2399, discount: 25,
+        images: [
+          "./images/salwars/premium-chanderi.jpg",
+          "./images/salwars/premium-chanderi.jpg"
+        ],
+        fabric: "Chanderi Silk", color: "Ivory White", pattern: "Zari Border",
+        occasion: "Festive / Party / Pooja", setIncludes: ["Chanderi Kameez", "Salwar Bottom", "Dupatta"],
+        description: "Luxurious Chanderi silk salwar set with delicate zari border work. A premium choice for festive gatherings and celebrations.",
+        sizes: ["S", "M", "L", "XL", "XXL"], isNew: true, isBestSeller: true, rating: 4.8, reviews: 78, stock: 14
+      },
   {
-    id: 1, name: "Royal Blue Designer Silk Saree", category: "Sarees",
-    price: 2499, originalPrice: 3499, discount: 29,
-    images: [
-      "./images/sarees/royal-blue-saree.png",
-      "./images/sarees/royal-blue-saree.png"
-    ],
-    fabric: "Silk", color: "Royal Blue", pattern: "Zari Border & Floral Buttis",
-    occasion: "Wedding / Festive", length: "5.5 meters", blouse: "Gold Blouse Included",
-    description: "Exquisite royal blue silk saree adorned with delicate gold zari border embroidery, scattered floral buttis, and paired with an antique gold blouse piece.",
-    sizes: [], isNew: true, isBestSeller: true, rating: 4.9, reviews: 148, stock: 12
-  },
-  {
-    id: 2, name: "Magenta Fuchsia Embroidered Saree", category: "Sarees",
-    price: 2199, originalPrice: 2999, discount: 27,
-    images: [
-      "./images/sarees/magenta-pink-saree.png",
-      "./images/sarees/magenta-pink-saree.png"
-    ],
-    fabric: "Soft Silk / Organza", color: "Magenta Pink", pattern: "Scalloped Floral Border",
-    occasion: "Party / Festive", length: "5.5 meters", blouse: "Included",
-    description: "Striking magenta fuchsia pink saree featuring handcrafted scalloped thread and zari embroidery along the border with delicate scattered motifs.",
-    sizes: [], isNew: true, isBestSeller: true, rating: 4.8, reviews: 112, stock: 10
-  },
-  {
-    id: 3, name: "Turquoise & Teal Ombre Saree", category: "Sarees",
-    price: 1899, originalPrice: 2499, discount: 24,
-    images: [
-      "./images/sarees/turquoise-teal-saree.png",
-      "./images/sarees/turquoise-teal-saree.png"
-    ],
-    fabric: "Georgette", color: "Turquoise Blue", pattern: "Dual-Tone Floral Embroidery",
-    occasion: "Reception / Party", length: "5.5 meters", blouse: "Deep Blue Included",
-    description: "Breathtaking dual-tone ombre transition from sky turquoise to deep ocean teal, finished with ornate floral border and hem embroidery.",
-    sizes: [], isNew: false, isBestSeller: true, rating: 4.7, reviews: 94, stock: 15
-  },
-  {
-    id: 4, name: "Chocolate Coffee Silk Saree", category: "Sarees",
+    id: 16, name: "Mustard Yellow Floral Embroidered Salwar Set", category: "Salwars",
     price: 1999, originalPrice: 2699, discount: 26,
     images: [
-      "./images/sarees/chocolate-brown-saree.png",
-      "./images/sarees/chocolate-brown-saree.png"
+      "./images/salwars/yellow-floral-salwar.png",
+      "./images/salwars/yellow-floral-salwar.png"
     ],
-    fabric: "Soft Silk", color: "Chocolate Brown", pattern: "Pearl & Stone Border Work",
-    occasion: "Festive / Evening Wear", length: "5.5 meters", blouse: "Gold Blouse Included",
-    description: "Regal chocolate coffee brown silk saree embellished with fine stone and pearl border detailing and all-over floral buttis, styled with an antique gold blouse.",
-    sizes: [], isNew: true, isBestSeller: false, rating: 4.8, reviews: 86, stock: 8
+    fabric: "Chanderi Cotton", color: "Mustard Yellow", pattern: "Delicate Floral Vine Embroidery",
+    occasion: "Festive / Haldi / Casual", setIncludes: ["Embroidered Kurta", "Straight Pant", "Matching Dupatta"],
+    description: "Vibrant mustard yellow salwar set with handcrafted floral vine embroidery along the front and sleeves, tailored straight pants, and lightweight sheer dupatta.",
+    sizes: ["S","M","L","XL","XXL"], isNew: true, isBestSeller: true, rating: 4.9, reviews: 118, stock: 14
   },
   {
-    id: 5, name: "Chiffon Designer Saree", category: "Sarees",
-    price: 1299, originalPrice: 1799, discount: 28,
+    id: 17, name: "Dusty Rose Floral Printed Salwar Set", category: "Salwars",
+    price: 1699, originalPrice: 2299, discount: 26,
     images: [
-      "./images/sarees/chiffon-designer.jpg",
-      "./images/sarees/chiffon-designer.jpg"
+      "./images/salwars/dusty-rose-salwar.png",
+      "./images/salwars/dusty-rose-salwar.png"
     ],
-    fabric: "Chiffon", color: "Teal Green", pattern: "Digital Print",
-    occasion: "Office / Casual / Party", length: "5.5 meters", blouse: "Included",
-    description: "Lightweight chiffon saree with a contemporary digital print. Flows gracefully and ideal for office or casual gatherings.",
-    sizes: [], isNew: false, isBestSeller: true, rating: 4.5, reviews: 155, stock: 20
+    fabric: "Pure Cotton", color: "Dusty Rose", pattern: "Botanical Print & Zari Accents",
+    occasion: "Daily Wear / Office / Festive", setIncludes: ["Printed Kurta", "Cotton Trouser", "Zari Border Dupatta"],
+    description: "Graceful dusty rose pink salwar suit featuring sophisticated botanical motifs, scalloped neckline, matching trousers, and an ornate striped border dupatta.",
+    sizes: ["S","M","L","XL","XXL"], isNew: true, isBestSeller: false, rating: 4.8, reviews: 89, stock: 20
   },
   {
-    id: 6, name: "Georgette Party Wear Saree", category: "Sarees",
-    price: 1599, originalPrice: 2199, discount: 27,
+    id: 18, name: "Mint Sage Green Hand-Painted Lotus Salwar Set", category: "Salwars",
+    price: 2199, originalPrice: 2899, discount: 24,
     images: [
-      "./images/sarees/georgette-party.jpg",
-      "./images/sarees/georgette-party.jpg"
+      "./images/salwars/mint-green-lotus-salwar.png",
+      "./images/salwars/mint-green-lotus-salwar.png"
     ],
-    fabric: "Georgette", color: "Rose Pink", pattern: "Sequin Work",
-    occasion: "Party / Reception", length: "5.5 meters", blouse: "Included",
-    description: "Glamorous georgette saree with sequin and stone work. The perfect choice for parties and evening receptions.",
-    sizes: [], isNew: false, isBestSeller: false, rating: 4.7, reviews: 88, stock: 5
+    fabric: "Chanderi Silk", color: "Mint Green", pattern: "Hand-Painted Lotus Motifs",
+    occasion: "Party / Festive / Pooja", setIncludes: ["Lotus Painted Kurta", "Silk Bottom", "Striped Border Dupatta"],
+    description: "Serene mint sage green Chanderi salwar suit adorned with artistic hand-painted pink lotus motifs along the hem and dupatta, with golden zari piping.",
+    sizes: ["S","M","L","XL","XXL"], isNew: true, isBestSeller: true, rating: 4.9, reviews: 142, stock: 10
+  },
+  {
+    id: 19, name: "Magenta Purple Ombre Embroidered Salwar Set", category: "Salwars",
+    price: 2399, originalPrice: 3199, discount: 25,
+    images: [
+      "./images/salwars/magenta-purple-salwar.png",
+      "./images/salwars/magenta-purple-salwar.png"
+    ],
+    fabric: "Art Silk", color: "Magenta Purple", pattern: "Dual-Tone Ombre & Embroidered Yoke",
+    occasion: "Wedding / Reception / Festive", setIncludes: ["Flared Ombre Kurta", "Silk Trouser", "Scalloped Embroidered Dupatta"],
+    description: "Opulent dual-tone ombre salwar set transitioning from royal magenta to deep purple, embellished with an intricately embroidered zari yoke and scalloped dupatta.",
+    sizes: ["S","M","L","XL","XXL"], isNew: true, isBestSeller: true, rating: 4.9, reviews: 165, stock: 8
+  },
+  {
+    id: 20, name: "Monochrome Botanical Leaf Printed Salwar Set", category: "Salwars",
+    price: 1499, originalPrice: 1999, discount: 25,
+    images: [
+      "./images/salwars/monochrome-black-salwar.jpg",
+      "./images/salwars/monochrome-black-salwar.jpg"
+    ],
+    fabric: "Mulmul Cotton", color: "Black & White", pattern: "Botanical Leaf Print & Embroidered Neck",
+    occasion: "Casual / Evening / Contemporary", setIncludes: ["V-Neck Printed Kurta", "Striped Trousers", "Striped Border Dupatta"],
+    description: "Contemporary monochrome black and ivory salwar set with bold leaf motifs, embroidered V-neckline, striped trousers, and matching lightweight dupatta.",
+    sizes: ["S","M","L","XL","XXL"], isNew: true, isBestSeller: false, rating: 4.7, reviews: 73, stock: 25
   }
-];
+    ];
 
-const SALWARS = [
-  {
-    id: 10, name: "Floral Printed Cotton Salwar Set", category: "Salwars",
-    price: 1199, originalPrice: 1599, discount: 25,
-    images: [
-      "./images/salwars/floral-cotton.jpg",
-      "./images/salwars/floral-cotton.jpg"
-    ],
-    fabric: "Cotton", color: "Pink", pattern: "Floral Print",
-    occasion: "Casual / Daily Wear", setIncludes: ["Kameez", "Salwar Bottom", "Dupatta"],
-    description: "Bright and comfortable floral printed cotton salwar set. Lightweight and breathable, perfect for daily wear.",
-    sizes: ["S","M","L","XL","XXL"], isNew: true, isBestSeller: false, rating: 4.5, reviews: 143, stock: 40
-  },
-  {
-    id: 11, name: "Embroidered Anarkali Salwar Set", category: "Salwars",
-    price: 1899, originalPrice: 2499, discount: 24,
-    images: [
-      "./images/salwars/embroidered-anarkali.jpg",
-      "./images/salwars/embroidered-anarkali.jpg"
-    ],
-    fabric: "Georgette", color: "Maroon", pattern: "Floral Embroidery",
-    occasion: "Festive / Party", setIncludes: ["Anarkali Kameez", "Salwar Bottom", "Dupatta"],
-    description: "Graceful Anarkali style salwar set with detailed embroidery work. Ideal for festive occasions and family functions.",
-    sizes: ["S","M","L","XL","XXL"], isNew: false, isBestSeller: true, rating: 4.8, reviews: 97, stock: 18
-  },
-  {
-    id: 12, name: "Straight Cut Printed Salwar Set", category: "Salwars",
-    price: 1299, originalPrice: 1699, discount: 24,
-    images: [
-      "./images/salwars/straight-cut.jpg",
-      "./images/salwars/straight-cut.jpg"
-    ],
-    fabric: "Rayon", color: "Sky Blue", pattern: "Geometric Print",
-    occasion: "Office / Casual", setIncludes: ["Kameez", "Salwar Bottom", "Dupatta"],
-    description: "Elegant straight-cut salwar set with contemporary geometric print. Versatile enough for office and casual outings.",
-    sizes: ["S","M","L","XL","XXL"], isNew: true, isBestSeller: false, rating: 4.4, reviews: 62, stock: 25
-  },
-  {
-    id: 13, name: "Festive Designer Salwar Set", category: "Salwars",
-    price: 2199, originalPrice: 2999, discount: 27,
-    images: [
-      "./images/salwars/festive-designer.jpg",
-      "./images/salwars/festive-designer.jpg"
-    ],
-    fabric: "Art Silk", color: "Golden Yellow", pattern: "Block Print",
-    occasion: "Wedding / Festive", setIncludes: ["Designer Kameez", "Palazzo Bottom", "Dupatta"],
-    description: "Regal festive designer salwar set with rich block print and golden embellishments. Perfect for weddings and grand celebrations.",
-    sizes: ["S","M","L","XL","XXL"], isNew: false, isBestSeller: true, rating: 4.9, reviews: 115, stock: 10
-  },
-  {
-    id: 14, name: "Cotton Daily Wear Salwar Set", category: "Salwars",
-    price: 899, originalPrice: 1199, discount: 25,
-    images: [
-      "./images/salwars/cotton-daily.jpg",
-      "./images/salwars/cotton-daily.jpg"
-    ],
-    fabric: "Cotton", color: "Olive Green", pattern: "Solid / Embroidered Neck",
-    occasion: "Daily Wear / Home", setIncludes: ["Kameez", "Salwar Bottom", "Dupatta"],
-    description: "Simple, comfortable pure cotton daily wear salwar set. Easy to maintain and perfect for everyday comfort.",
-    sizes: ["S","M","L","XL","XXL"], isNew: false, isBestSeller: false, rating: 4.3, reviews: 220, stock: 50
-  },
-  {
-    id: 15, name: "Premium Chanderi Salwar Set", category: "Salwars",
-    price: 1799, originalPrice: 2399, discount: 25,
-    images: [
-      "./images/salwars/premium-chanderi.jpg",
-      "./images/salwars/premium-chanderi.jpg"
-    ],
-    fabric: "Chanderi Silk", color: "Ivory White", pattern: "Zari Border",
-    occasion: "Festive / Party / Pooja", setIncludes: ["Chanderi Kameez", "Salwar Bottom", "Dupatta"],
-    description: "Luxurious Chanderi silk salwar set with delicate zari border work. A premium choice for festive gatherings and celebrations.",
-    sizes: ["S","M","L","XL","XXL"], isNew: true, isBestSeller: true, rating: 4.8, reviews: 78, stock: 14
-  }
-];
+    const ALL_PRODUCTS = [...SAREES, ...SALWARS];
 
-const ALL_PRODUCTS = [...SAREES, ...SALWARS];
+    /* ============================================================
+       UTILITY FUNCTIONS
+       ============================================================ */
+    const fmt = (n) => `₹${Number(n).toLocaleString('en-IN')}`;
 
-/* ============================================================
-   UTILITY FUNCTIONS
-   ============================================================ */
-const fmt = (n) => `₹${Number(n).toLocaleString('en-IN')}`;
+    const Stars = ({ rating, small }) => {
+      const full = Math.floor(rating);
+      return (
+        <span className={`flex items-center gap-0.5 ${small ? 'text-xs' : 'text-sm'}`}>
+          {[1, 2, 3, 4, 5].map(i => (
+            <svg key={i} viewBox="0 0 20 20" fill={i <= full ? "#C9972A" : "#D4C5A9"} className={small ? "w-3 h-3" : "w-4 h-4"}>
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          ))}
+          <span className={`ml-1 text-warm-gray font-sans ${small ? 'text-xs' : 'text-xs'}`}>{rating}</span>
+        </span>
+      );
+    };
 
-const Stars = ({ rating, small }) => {
-  const full = Math.floor(rating);
-  return (
-    <span className={`flex items-center gap-0.5 ${small ? 'text-xs' : 'text-sm'}`}>
-      {[1,2,3,4,5].map(i => (
-        <svg key={i} viewBox="0 0 20 20" fill={i <= full ? "#C9972A" : "#D4C5A9"} className={small ? "w-3 h-3" : "w-4 h-4"}>
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-        </svg>
-      ))}
-      <span className={`ml-1 text-warm-gray font-sans ${small ? 'text-xs' : 'text-xs'}`}>{rating}</span>
-    </span>
-  );
-};
+    const Toast = ({ message, onDone }) => {
+      useEffect(() => {
+        const t = setTimeout(onDone, 2400);
+        return () => clearTimeout(t);
+      }, []);
+      return <div className="toast">{message}</div>;
+    };
 
-const Toast = ({ message, onDone }) => {
-  useEffect(() => {
-    const t = setTimeout(onDone, 2400);
-    return () => clearTimeout(t);
-  }, []);
-  return <div className="toast">{message}</div>;
-};
+    /* ============================================================
+       ICON COMPONENTS (inline SVG)
+       ============================================================ */
+    const Icon = {
+      Search: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>,
+      Heart: (p) => <svg {...p} viewBox="0 0 24 24" fill={p.filled ? "#8B2139" : "none"} stroke={p.filled ? "#8B2139" : "currentColor"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>,
+      Bag: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" /><line x1="3" y1="6" x2="21" y2="6" /><path d="M16 10a4 4 0 01-8 0" /></svg>,
+      User: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>,
+      X: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>,
+      Chevron: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points={p.down ? "6 9 12 15 18 9" : "18 15 12 9 6 15"} /></svg>,
+      Trash: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="3 6 5 6 21 6" /><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a1 1 0 011-1h4a1 1 0 011 1v2" /></svg>,
+      Instagram: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg>,
+      Facebook: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" /></svg>,
+      Youtube: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z" /><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" /></svg>,
+      Filter: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" /></svg>,
+      Check: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>,
+      Package: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21" /><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" /><polyline points="3.27 6.96 12 12.01 20.73 6.96" /><line x1="12" y1="22.08" x2="12" y2="12" /></svg>,
+      Shield: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>,
+      Truck: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13" /><polygon points="16 8 20 8 23 11 23 16 16 16 16 8" /><circle cx="5.5" cy="18.5" r="2.5" /><circle cx="18.5" cy="18.5" r="2.5" /></svg>,
+      Star2: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>,
+      Mail: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>,
+      Phone: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 01-1.45 1.93 19.86 19.86 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.86 19.86 0 01-3.07-8.67A2 2 0 014.73 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" /></svg>,
+    };
 
-/* ============================================================
-   ICON COMPONENTS (inline SVG)
-   ============================================================ */
-const Icon = {
-  Search: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>,
-  Heart: (p) => <svg {...p} viewBox="0 0 24 24" fill={p.filled ? "#8B2139" : "none"} stroke={p.filled ? "#8B2139" : "currentColor"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>,
-  Bag: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>,
-  User: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>,
-  X: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>,
-  Chevron: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points={p.down ? "6 9 12 15 18 9" : "18 15 12 9 6 15"}/></svg>,
-  Trash: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a1 1 0 011-1h4a1 1 0 011 1v2"/></svg>,
-  Instagram: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>,
-  Facebook: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>,
-  Youtube: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>,
-  Filter: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>,
-  Check: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>,
-  Package: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>,
-  Shield: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
-  Truck: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>,
-  Star2: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>,
-  Mail: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>,
-  Phone: (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 01-1.45 1.93 19.86 19.86 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.86 19.86 0 01-3.07-8.67A2 2 0 014.73 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>,
-};
+    /* ============================================================
+       HEADER / NAVBAR
+       ============================================================ */
+    function Header({ cart, wishlist, navigate, page }) {
+      const [menuOpen, setMenuOpen] = useState(false);
+      const [searchOpen, setSearchOpen] = useState(false);
+      const [searchQ, setSearchQ] = useState('');
 
-/* ============================================================
-   HEADER / NAVBAR
-   ============================================================ */
-function Header({ cart, wishlist, navigate, page }) {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
-  const [searchQ, setSearchQ] = useState('');
+      const cartCount = cart.reduce((s, i) => s + i.qty, 0);
+      const wishCount = wishlist.length;
 
-  const cartCount = cart.reduce((s, i) => s + i.qty, 0);
-  const wishCount = wishlist.length;
+      const navLinks = [
+        { label: 'Home', hash: '#/' },
+        { label: 'Sarees', hash: '#/sarees' },
+        { label: 'Salwars', hash: '#/salwars' },
+        { label: 'New Arrivals', hash: '#/new-arrivals' },
+        { label: 'Best Sellers', hash: '#/best-sellers' },
+        { label: 'Offers', hash: '#/offers' },
+      ];
 
-  const navLinks = [
-    { label: 'Home', hash: '#/' },
-    { label: 'Sarees', hash: '#/sarees' },
-    { label: 'Salwars', hash: '#/salwars' },
-    { label: 'New Arrivals', hash: '#/new-arrivals' },
-    { label: 'Best Sellers', hash: '#/best-sellers' },
-    { label: 'Offers', hash: '#/offers' },
-  ];
+      const doSearch = (e) => {
+        e.preventDefault();
+        if (searchQ.trim()) {
+          navigate('search', searchQ.trim());
+          setSearchOpen(false);
+          setSearchQ('');
+        }
+      };
 
-  const doSearch = (e) => {
-    e.preventDefault();
-    if (searchQ.trim()) {
-      navigate('search', searchQ.trim());
-      setSearchOpen(false);
-      setSearchQ('');
-    }
-  };
+      return (
+        <header className="header-sticky bg-cream border-b border-beige shadow-sm">
+          {/* Top strip */}
+          <div className="bg-maroon text-cream text-xs py-1.5 text-center font-sans tracking-wide">✨ Free Delivery on orders above ₹999 &nbsp;|&nbsp; Festive Collection Now Live!</div>
 
-  return (
-    <header className="header-sticky bg-cream border-b border-beige shadow-sm">
-      {/* Top strip */}
-      <div className="bg-maroon text-cream text-xs py-1.5 text-center font-sans tracking-wide">✨ Free Delivery on orders above ₹999 &nbsp;|&nbsp; Festive Collection Now Live!</div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="flex items-center justify-between h-16 sm:h-20">
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-20 sm:h-24">
-
-          {/* Hamburger (mobile) */}
-          <button className="sm:hidden flex flex-col justify-center w-8 h-8 mr-2" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
-            <span className="hamburger-line" style={menuOpen ? {transform:'rotate(45deg) translate(4px,4px)'} : {}}/>
-            <span className="hamburger-line" style={menuOpen ? {opacity:0} : {}}/>
-            <span className="hamburger-line" style={menuOpen ? {transform:'rotate(-45deg) translate(4px,-4px)'} : {}}/>
-          </button>
-
-          {/* Logo */}
-          <a href="#/" className="flex items-center select-none py-1" onClick={() => setMenuOpen(false)}>
-            <img src="./images/logo.png" alt="SRITHI THE COUTURE" className="h-11 sm:h-14 md:h-16 w-auto object-contain transition-transform hover:scale-105 duration-200" style={{ mixBlendMode: 'multiply' }} />
-          </a>
-
-          {/* Nav links (desktop) */}
-          <nav className="hidden sm:flex items-center gap-6">
-            {navLinks.map(l => (
-              <a key={l.hash} href={l.hash}
-                className={`font-sans text-sm font-medium tracking-wide transition-colors hover:text-gold ${page === l.hash.slice(1) ? 'text-maroon border-b-2 border-gold pb-0.5' : 'text-dark-brown'}`}>
-                {l.label}
-              </a>
-            ))}
-          </nav>
-
-          {/* Right icons */}
-          <div className="flex items-center gap-3 sm:gap-4">
-            {/* Search */}
-            <button onClick={() => setSearchOpen(!searchOpen)} className="text-dark-brown hover:text-maroon transition-colors" aria-label="Search">
-              <Icon.Search className="w-5 h-5" />
-            </button>
-
-            {/* Wishlist */}
-            <a href="#/wishlist" className="relative text-dark-brown hover:text-maroon transition-colors hidden sm:block" aria-label="Wishlist">
-              <Icon.Heart className="w-5 h-5" filled={wishCount > 0} />
-              {wishCount > 0 && <span className="absolute -top-1.5 -right-1.5 bg-gold text-dark-brown text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">{wishCount}</span>}
-            </a>
-
-            {/* Cart */}
-            <a href="#/cart" className="relative text-dark-brown hover:text-maroon transition-colors" aria-label="Cart">
-              <Icon.Bag className="w-5 h-5" />
-              {cartCount > 0 && <span className="absolute -top-1.5 -right-1.5 bg-maroon text-cream text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">{cartCount}</span>}
-            </a>
-
-            {/* User */}
-            <button className="text-dark-brown hover:text-maroon transition-colors hidden sm:block" aria-label="Account">
-              <Icon.User className="w-5 h-5" />
-            </button>
-          </div>
-        </div>
-
-        {/* Search bar */}
-        {searchOpen && (
-          <div className="pb-3 border-t border-beige pt-3">
-            <form onSubmit={doSearch} className="flex gap-2">
-              <input value={searchQ} onChange={e => setSearchQ(e.target.value)}
-                className="flex-1 border border-beige rounded px-4 py-2 text-sm font-sans bg-ivory focus:outline-none focus:border-gold text-dark-brown nl-input"
-                placeholder="Search sarees, salwars, fabric, color..." autoFocus />
-              <button type="submit" className="btn-gold px-4 py-2 rounded text-sm">Search</button>
-              <button type="button" onClick={() => setSearchOpen(false)} className="text-warm-gray hover:text-maroon px-2">
-                <Icon.X className="w-4 h-4" />
+              {/* Hamburger (mobile) */}
+              <button className="sm:hidden flex flex-col justify-center w-8 h-8 mr-2" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
+                <span className="hamburger-line" style={menuOpen ? { transform: 'rotate(45deg) translate(4px,4px)' } : {}} />
+                <span className="hamburger-line" style={menuOpen ? { opacity: 0 } : {}} />
+                <span className="hamburger-line" style={menuOpen ? { transform: 'rotate(-45deg) translate(4px,-4px)' } : {}} />
               </button>
-            </form>
-          </div>
-        )}
 
-        {/* Mobile menu */}
-        {menuOpen && (
-          <div className="sm:hidden border-t border-beige pb-4 pt-2">
-            {navLinks.map(l => (
-              <a key={l.hash} href={l.hash} onClick={() => setMenuOpen(false)}
-                className="block py-2.5 px-2 font-sans text-sm font-medium text-dark-brown hover:text-maroon border-b border-ivory last:border-0">
-                {l.label}
+              {/* Logo */}
+              <a href="#/" className="flex items-center select-none py-1" onClick={() => setMenuOpen(false)}>
+                <img src="./images/logo.png" alt="SRITHI THE COUTURE" className="h-8 sm:h-11 w-auto object-contain transition-transform hover:scale-105 duration-200" style={{ mixBlendMode: 'multiply' }} />
               </a>
-            ))}
-            <a href="#/wishlist" onClick={() => setMenuOpen(false)} className="block py-2.5 px-2 font-sans text-sm font-medium text-dark-brown hover:text-maroon">
-              ♡ Wishlist {wishCount > 0 && `(${wishCount})`}
-            </a>
+
+              {/* Nav links (desktop) */}
+              <nav className="hidden sm:flex items-center gap-6">
+                {navLinks.map(l => (
+                  <a key={l.hash} href={l.hash}
+                    className={`font-sans text-sm font-medium tracking-wide transition-colors hover:text-gold ${page === l.hash.slice(1) ? 'text-maroon border-b-2 border-gold pb-0.5' : 'text-dark-brown'}`}>
+                    {l.label}
+                  </a>
+                ))}
+              </nav>
+
+              {/* Right icons */}
+              <div className="flex items-center gap-3 sm:gap-4">
+                {/* Search */}
+                <button onClick={() => setSearchOpen(!searchOpen)} className="text-dark-brown hover:text-maroon transition-colors" aria-label="Search">
+                  <Icon.Search className="w-5 h-5" />
+                </button>
+
+                {/* Wishlist */}
+                <a href="#/wishlist" className="relative text-dark-brown hover:text-maroon transition-colors hidden sm:block" aria-label="Wishlist">
+                  <Icon.Heart className="w-5 h-5" filled={wishCount > 0} />
+                  {wishCount > 0 && <span className="absolute -top-1.5 -right-1.5 bg-gold text-dark-brown text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">{wishCount}</span>}
+                </a>
+
+                {/* Cart */}
+                <a href="#/cart" className="relative text-dark-brown hover:text-maroon transition-colors" aria-label="Cart">
+                  <Icon.Bag className="w-5 h-5" />
+                  {cartCount > 0 && <span className="absolute -top-1.5 -right-1.5 bg-maroon text-cream text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">{cartCount}</span>}
+                </a>
+
+                {/* User */}
+                <button className="text-dark-brown hover:text-maroon transition-colors hidden sm:block" aria-label="Account">
+                  <Icon.User className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+
+            {/* Search bar */}
+            {searchOpen && (
+              <div className="pb-3 border-t border-beige pt-3">
+                <form onSubmit={doSearch} className="flex gap-2">
+                  <input value={searchQ} onChange={e => setSearchQ(e.target.value)}
+                    className="flex-1 border border-beige rounded px-4 py-2 text-sm font-sans bg-ivory focus:outline-none focus:border-gold text-dark-brown nl-input"
+                    placeholder="Search sarees, salwars, fabric, color..." autoFocus />
+                  <button type="submit" className="btn-gold px-4 py-2 rounded text-sm">Search</button>
+                  <button type="button" onClick={() => setSearchOpen(false)} className="text-warm-gray hover:text-maroon px-2">
+                    <Icon.X className="w-4 h-4" />
+                  </button>
+                </form>
+              </div>
+            )}
+
+            {/* Mobile menu */}
+            {menuOpen && (
+              <div className="sm:hidden border-t border-beige pb-4 pt-2">
+                {navLinks.map(l => (
+                  <a key={l.hash} href={l.hash} onClick={() => setMenuOpen(false)}
+                    className="block py-2.5 px-2 font-sans text-sm font-medium text-dark-brown hover:text-maroon border-b border-ivory last:border-0">
+                    {l.label}
+                  </a>
+                ))}
+                <a href="#/wishlist" onClick={() => setMenuOpen(false)} className="block py-2.5 px-2 font-sans text-sm font-medium text-dark-brown hover:text-maroon">
+                  ♡ Wishlist {wishCount > 0 && `(${wishCount})`}
+                </a>
+              </div>
+            )}
           </div>
-        )}
-      </div>
-    </header>
-  );
-}
-
-/* ============================================================
-   FOOTER
-   ============================================================ */
-function Footer() {
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
-  return (
-    <footer className="bg-dark-brown text-cream">
-      {/* Newsletter */}
-      <div className="bg-maroon py-10 px-4">
-        <div className="max-w-2xl mx-auto text-center">
-          <h3 className="font-serif text-2xl text-gold mb-2">Stay Updated With Our Latest Collections</h3>
-          <p className="font-sans text-sm text-beige mb-5">Be the first to discover new arrivals, exclusive offers and festive collections.</p>
-          {subscribed ? (
-            <p className="text-gold font-sans font-semibold">✓ Thank you for subscribing!</p>
-          ) : (
-            <form onSubmit={e => { e.preventDefault(); if(email) setSubscribed(true); }} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input value={email} onChange={e => setEmail(e.target.value)} type="email" required
-                className="flex-1 px-4 py-2.5 rounded text-dark-brown text-sm font-sans nl-input bg-cream focus:outline-none"
-                placeholder="Enter your email" />
-              <button type="submit" className="btn-gold px-6 py-2.5 rounded text-sm">Subscribe</button>
-            </form>
-          )}
-        </div>
-      </div>
-
-      {/* Main footer */}
-      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
-        {/* Brand */}
-        <div className="col-span-2 md:col-span-1">
-          <div className="mb-4">
-            <img src="./images/logo.png" alt="SRITHI THE COUTURE" className="h-10 sm:h-12 w-auto object-contain mb-2" style={{ filter: 'brightness(0) invert(1)', opacity: 0.95 }} />
-            <div className="font-sans text-gold text-[10px] tracking-[0.25em] font-medium">ELEGANT ETHNIC WEAR</div>
-          </div>
-          <p className="font-sans text-sm text-warm-gray leading-relaxed mb-4">Premium Indian ethnic wear, exclusively for sarees and salwar suits. Crafted with elegance, delivered with love.</p>
-          <div className="flex gap-3">
-            <a href="#" className="text-warm-gray hover:text-gold transition-colors"><Icon.Instagram className="w-5 h-5" /></a>
-            <a href="#" className="text-warm-gray hover:text-gold transition-colors"><Icon.Facebook className="w-5 h-5" /></a>
-            <a href="#" className="text-warm-gray hover:text-gold transition-colors"><Icon.Youtube className="w-5 h-5" /></a>
-          </div>
-        </div>
-
-        {/* Shop */}
-        <div>
-          <h4 className="font-serif text-gold font-semibold mb-4 text-sm tracking-wider">SHOP</h4>
-          <ul className="space-y-2 font-sans text-sm text-warm-gray">
-            {[['About Us','#/'],['Sarees','#/sarees'],['Salwars','#/salwars'],['New Arrivals','#/new-arrivals'],['Offers','#/offers']].map(([l,h]) => (
-              <li key={l}><a href={h} className="hover:text-gold transition-colors">{l}</a></li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Support */}
-        <div>
-          <h4 className="font-serif text-gold font-semibold mb-4 text-sm tracking-wider">SUPPORT</h4>
-          <ul className="space-y-2 font-sans text-sm text-warm-gray">
-            {[['Contact Us','#/'],['Shipping Information','#/'],['Returns & Refunds','#/'],['Size Guide','#/size-guide'],['FAQs','#/']].map(([l,h]) => (
-              <li key={l}><a href={h} className="hover:text-gold transition-colors">{l}</a></li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Contact */}
-        <div>
-          <h4 className="font-serif text-gold font-semibold mb-4 text-sm tracking-wider">CONTACT</h4>
-          <ul className="space-y-3 font-sans text-sm text-warm-gray">
-            <li className="flex items-start gap-2"><Icon.Phone className="w-4 h-4 text-gold mt-0.5 shrink-0" /><span>+91 89403 77744<br/>+91 89403 77733</span></li>
-            <li className="flex items-center gap-2"><Icon.Mail className="w-4 h-4 text-gold shrink-0" /><span>hello@srithicouture.in</span></li>
-          </ul>
-          <div className="mt-5">
-            <h5 className="font-serif text-gold text-xs tracking-wider mb-2">POLICIES</h5>
-            <ul className="space-y-1.5 font-sans text-xs text-warm-gray">
-              {['Privacy Policy','Terms & Conditions','Cancellation Policy'].map(p => (
-                <li key={p}><a href="#/" className="hover:text-gold transition-colors">{p}</a></li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div className="border-t border-gray-800 py-4 text-center font-sans text-xs text-warm-gray">
-        © 2026 SRITHI THE COUTURE. All rights reserved. | Made with ❤ for Indian fashion lovers.
-      </div>
-    </footer>
-  );
-}
-
-/* ============================================================
-   PRODUCT CARD
-   ============================================================ */
-function ProductCard({ product, wishlist, toggleWishlist, addToCart, navigate, mini }) {
-  const inWish = wishlist.includes(product.id);
-  const [hovered, setHovered] = useState(false);
-  const [selectedSize, setSelectedSize] = useState('');
-
-  const isSalwar = product.category === 'Salwars';
-
-  const handleAddToCart = () => {
-    if (isSalwar && !selectedSize) {
-      alert('Please select a size before adding to cart.');
-      return;
+        </header>
+      );
     }
-    addToCart(product, selectedSize || null);
-  };
 
-  return (
-    <div className="product-card bg-white rounded-lg overflow-hidden border border-beige/60 cursor-pointer relative group"
-      onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    function Footer() {
+      const [email, setEmail] = useState('');
+      const [subscribed, setSubscribed] = useState(false);
 
-      {/* Badges */}
-      <div className="absolute top-2.5 left-2.5 z-10 flex flex-col gap-1.5">
-        {product.isNew && <span className="badge-new">NEW</span>}
-        {product.isBestSeller && <span className="badge-best">BEST SELLER</span>}
-        {product.stock <= 8 && <span className="badge-limited">LIMITED</span>}
-        {product.discount >= 25 && <span className="badge-sale">{product.discount}% OFF</span>}
-      </div>
-
-      {/* Wishlist icon */}
-      <button onClick={(e) => { e.stopPropagation(); toggleWishlist(product.id); }}
-        className={`wishlist-btn absolute top-2.5 right-2.5 z-10 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center shadow transition-opacity ${hovered || inWish ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
-        aria-label="Wishlist">
-        <Icon.Heart className={`w-4 h-4 ${inWish ? 'wishlist-active' : 'text-warm-gray'}`} filled={inWish} />
-      </button>
-
-      {/* Image */}
-      <a href={`#/product/${product.id}`} className="card-img block aspect-product bg-ivory overflow-hidden">
-        <img src={product.images[0]} alt={product.name} loading="lazy" onError={handleImgError}
-          className="w-full h-full object-cover object-top transition-transform duration-500"
-          style={{transform: hovered ? 'scale(1.06)' : 'scale(1)'}} />
-      </a>
-
-      {/* Info */}
-      <div className="p-3">
-        <a href={`#/product/${product.id}`}>
-          <h3 className="font-serif font-medium text-dark-brown text-sm leading-snug mb-1 hover:text-maroon transition-colors line-clamp-2">{product.name}</h3>
-        </a>
-        <Stars rating={product.rating} small />
-
-        {/* Sizes (salwar) */}
-        {isSalwar && (
-          <div className="mt-2 mb-1">
-            <div className="text-xs text-warm-gray font-sans mb-1">Size:</div>
-            <div className="flex gap-1 flex-wrap">
-              {product.sizes.map(sz => (
-                <button key={sz} onClick={() => setSelectedSize(sz === selectedSize ? '' : sz)}
-                  className={`size-btn text-xs px-2 py-0.5 ${selectedSize === sz ? 'selected' : ''}`}>{sz}</button>
-              ))}
+      return (
+        <footer className="bg-dark-brown text-cream">
+          {/* Newsletter */}
+          <div className="bg-maroon py-10 px-4">
+            <div className="max-w-2xl mx-auto text-center">
+              <h3 className="font-serif text-2xl text-gold mb-2">Stay Updated With Our Latest Collections</h3>
+              <p className="font-sans text-sm text-beige mb-5">Be the first to discover new arrivals, exclusive offers and festive collections.</p>
+              {subscribed ? (
+                <p className="text-gold font-sans font-semibold">✓ Thank you for subscribing!</p>
+              ) : (
+                <form onSubmit={e => { e.preventDefault(); if (email) setSubscribed(true); }} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                  <input value={email} onChange={e => setEmail(e.target.value)} type="email" required
+                    className="flex-1 px-4 py-2.5 rounded text-dark-brown text-sm font-sans nl-input bg-cream focus:outline-none"
+                    placeholder="Enter your email" />
+                  <button type="submit" className="btn-gold px-6 py-2.5 rounded text-sm">Subscribe</button>
+                </form>
+              )}
             </div>
           </div>
-        )}
 
-        {/* Price */}
-        <div className="flex items-baseline gap-2 mt-2">
-          <span className="font-sans font-bold text-maroon text-base">{fmt(product.price)}</span>
-          <span className="font-sans text-warm-gray text-xs line-through">{fmt(product.originalPrice)}</span>
-        </div>
-
-        {/* Buttons */}
-        <div className="mt-3 flex gap-2">
-          <button onClick={handleAddToCart}
-            className="flex-1 btn-gold py-2 rounded text-xs font-sans tracking-wide">
-            Add to Cart
-          </button>
-          <a href={`#/product/${product.id}`}
-            className="btn-outline py-2 px-3 rounded text-xs font-sans">
-            View
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-/* ============================================================
-   PRODUCT GRID
-   ============================================================ */
-function ProductGrid({ products, wishlist, toggleWishlist, addToCart, navigate }) {
-  if (!products.length) return (
-    <div className="text-center py-20 text-warm-gray font-sans">
-      <p className="text-4xl mb-3">🔍</p>
-      <p className="text-lg font-serif text-dark-brown">No products found</p>
-      <p className="text-sm mt-1">Try adjusting your filters or search query.</p>
-    </div>
-  );
-  return (
-    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
-      {products.map(p => (
-        <ProductCard key={p.id} product={p} wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} />
-      ))}
-    </div>
-  );
-}
-
-/* ============================================================
-   FILTER PANEL
-   ============================================================ */
-function FilterPanel({ filters, setFilters, products, category, onClose }) {
-  const fabrics = [...new Set(products.map(p => p.fabric))];
-  const colors = [...new Set(products.map(p => p.color))];
-  const occasions = [...new Set(products.map(p => p.occasion))];
-  const allSizes = ['S','M','L','XL','XXL'];
-
-  const toggle = (key, val) => {
-    setFilters(f => {
-      const arr = f[key] || [];
-      return { ...f, [key]: arr.includes(val) ? arr.filter(x => x !== val) : [...arr, val] };
-    });
-  };
-
-  const FilterGroup = ({ title, options, filterKey }) => {
-    const [open, setOpen] = useState(true);
-    return (
-      <div className="border-b border-beige pb-3 mb-3">
-        <button onClick={() => setOpen(!open)} className="flex items-center justify-between w-full text-left mb-2">
-          <span className="font-sans font-semibold text-dark-brown text-sm">{title}</span>
-          <Icon.Chevron className="w-4 h-4 text-warm-gray" down={!open} />
-        </button>
-        {open && (
-          <div className="space-y-1.5">
-            {options.map(opt => (
-              <label key={opt} className="flex items-center gap-2 cursor-pointer group">
-                <input type="checkbox" checked={(filters[filterKey]||[]).includes(opt)} onChange={() => toggle(filterKey, opt)} className="rounded"/>
-                <span className="font-sans text-sm text-dark-brown group-hover:text-maroon">{opt}</span>
-              </label>
-            ))}
-          </div>
-        )}
-      </div>
-    );
-  };
-
-  return (
-    <div className="bg-white border border-beige rounded-lg p-4 sticky top-24 max-h-screen overflow-y-auto">
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="font-serif font-semibold text-dark-brown text-base">Filters</h3>
-        <div className="flex gap-2 items-center">
-          <button onClick={() => setFilters({})} className="text-xs text-maroon font-sans hover:underline">Clear All</button>
-          {onClose && <button onClick={onClose} className="sm:hidden text-warm-gray"><Icon.X className="w-4 h-4" /></button>}
-        </div>
-      </div>
-
-      {/* Price range */}
-      <div className="border-b border-beige pb-3 mb-3">
-        <p className="font-sans font-semibold text-dark-brown text-sm mb-2">Price Range</p>
-        <div className="flex items-center gap-2 text-xs text-warm-gray font-sans mb-2">
-          <span>{fmt(filters.minPrice || 0)}</span> — <span>{fmt(filters.maxPrice || 5000)}</span>
-        </div>
-        <input type="range" min="0" max="5000" step="100" value={filters.maxPrice || 5000}
-          onChange={e => setFilters(f => ({...f, maxPrice: Number(e.target.value)}))}
-          className="w-full"/>
-      </div>
-
-      {category === 'Salwars' && <FilterGroup title="Size" options={allSizes} filterKey="sizes" />}
-      <FilterGroup title="Fabric" options={fabrics} filterKey="fabrics" />
-      <FilterGroup title="Color" options={colors} filterKey="colors" />
-      <FilterGroup title="Occasion" options={occasions} filterKey="occasions" />
-
-      {/* Discount filter */}
-      <div className="border-b border-beige pb-3 mb-3">
-        <p className="font-sans font-semibold text-dark-brown text-sm mb-2">Discount</p>
-        {[10,20,25,30].map(d => (
-          <label key={d} className="flex items-center gap-2 cursor-pointer mb-1.5">
-            <input type="checkbox" checked={(filters.discounts||[]).includes(d)} onChange={() => toggle('discounts', d)}/>
-            <span className="font-sans text-sm text-dark-brown">{d}% & above</span>
-          </label>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-/* ============================================================
-   SORT DROPDOWN
-   ============================================================ */
-function SortDropdown({ sort, setSort }) {
-  const opts = [
-    { v: 'recommended', l: 'Recommended' },
-    { v: 'newest', l: 'Newest First' },
-    { v: 'price-asc', l: 'Price: Low to High' },
-    { v: 'price-desc', l: 'Price: High to Low' },
-    { v: 'discount', l: 'Highest Discount' },
-    { v: 'rating', l: 'Popularity' },
-  ];
-  return (
-    <select value={sort} onChange={e => setSort(e.target.value)}
-      className="border border-beige rounded px-3 py-2 text-sm font-sans text-dark-brown bg-white focus:outline-none focus:border-gold">
-      {opts.map(o => <option key={o.v} value={o.v}>{o.l}</option>)}
-    </select>
-  );
-}
-
-/* ============================================================
-   SIZE GUIDE MODAL
-   ============================================================ */
-function SizeGuide({ onClose }) {
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4" onClick={onClose}>
-      <div className="overlay absolute inset-0" />
-      <div className="relative bg-cream rounded-xl shadow-2xl max-w-lg w-full p-6 z-10" onClick={e => e.stopPropagation()}>
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="font-serif text-xl text-maroon font-semibold">Salwar Size Guide</h2>
-          <button onClick={onClose} className="text-warm-gray hover:text-maroon"><Icon.X className="w-5 h-5" /></button>
-        </div>
-        <div className="gold-divider mb-4" style={{margin:'0 0 1rem 0'}} />
-        <div className="overflow-x-auto">
-          <table className="w-full text-sm font-sans border-collapse">
-            <thead>
-              <tr className="bg-maroon text-cream">
-                {['Size','Bust','Waist','Hip'].map(h => <th key={h} className="py-2.5 px-4 text-left font-semibold">{h}</th>)}
-              </tr>
-            </thead>
-            <tbody>
-              {[['S','34"','28"','36"'],['M','36"','30"','38"'],['L','38"','32"','40"'],['XL','40"','34"','42"'],['XXL','42"','36"','44"']].map(([sz, b, w, h], i) => (
-                <tr key={sz} className={i % 2 === 0 ? 'bg-ivory' : 'bg-white'}>
-                  <td className="py-2.5 px-4 font-bold text-maroon">{sz}</td>
-                  <td className="py-2.5 px-4">{b}</td>
-                  <td className="py-2.5 px-4">{w}</td>
-                  <td className="py-2.5 px-4">{h}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p className="text-xs text-warm-gray font-sans mt-4">All measurements are in inches. If in doubt, choose a larger size.</p>
-      </div>
-    </div>
-  );
-}
-
-/* ============================================================
-   PRODUCT LISTING PAGE
-   ============================================================ */
-function ProductListingPage({ category, products, wishlist, toggleWishlist, addToCart, navigate }) {
-  const [filters, setFilters] = useState({});
-  const [sort, setSort] = useState('recommended');
-  const [filterOpen, setFilterOpen] = useState(false);
-
-  const filtered = useMemo(() => {
-    let arr = products.filter(p => p.category === category);
-    if (filters.maxPrice) arr = arr.filter(p => p.price <= filters.maxPrice);
-    if (filters.fabrics?.length) arr = arr.filter(p => filters.fabrics.includes(p.fabric));
-    if (filters.colors?.length) arr = arr.filter(p => filters.colors.includes(p.color));
-    if (filters.occasions?.length) arr = arr.filter(p => filters.occasions.some(o => p.occasion.includes(o)));
-    if (filters.sizes?.length && category === 'Salwars') arr = arr.filter(p => filters.sizes.some(s => p.sizes.includes(s)));
-    if (filters.discounts?.length) arr = arr.filter(p => filters.discounts.some(d => p.discount >= d));
-
-    if (sort === 'price-asc') arr = [...arr].sort((a,b) => a.price - b.price);
-    else if (sort === 'price-desc') arr = [...arr].sort((a,b) => b.price - a.price);
-    else if (sort === 'discount') arr = [...arr].sort((a,b) => b.discount - a.discount);
-    else if (sort === 'rating') arr = [...arr].sort((a,b) => b.rating - a.rating);
-    else if (sort === 'newest') arr = arr.filter(p => p.isNew).concat(arr.filter(p => !p.isNew));
-    return arr;
-  }, [products, category, filters, sort]);
-
-  return (
-    <div className="page-enter max-w-7xl mx-auto px-4 sm:px-6 py-8">
-      {/* Page header */}
-      <div className="text-center mb-8">
-        <h1 className="font-serif text-3xl sm:text-4xl text-maroon font-semibold mb-2">
-          {category === 'Sarees' ? 'Our Saree Collection' : 'Our Salwar Suit Collection'}
-        </h1>
-        <div className="gold-divider" />
-        <p className="font-sans text-warm-gray text-sm">
-          {category === 'Sarees'
-            ? 'Discover timeless elegance — from traditional silks to modern chiffons.'
-            : 'Comfortable, stylish salwar sets for every woman, every occasion.'}
-        </p>
-      </div>
-
-      <div className="flex gap-6">
-        {/* Filter — desktop sidebar */}
-        <div className="hidden sm:block w-56 shrink-0">
-          <FilterPanel filters={filters} setFilters={setFilters} products={products} category={category} />
-        </div>
-
-        {/* Main content */}
-        <div className="flex-1 min-w-0">
-          {/* Toolbar */}
-          <div className="flex items-center justify-between mb-5 flex-wrap gap-3">
-            <div className="flex items-center gap-3">
-              <button className="sm:hidden flex items-center gap-1.5 border border-beige rounded px-3 py-2 text-sm font-sans text-dark-brown bg-white"
-                onClick={() => setFilterOpen(true)}>
-                <Icon.Filter className="w-4 h-4" /> Filters
-              </button>
-              <span className="text-sm font-sans text-warm-gray">{filtered.length} products</span>
+          {/* Main footer */}
+          <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+            {/* Brand */}
+            <div className="col-span-2 md:col-span-1">
+              <div className="mb-4">
+                <img src="C:\Users\91807\Downloads\IMG_7081.PNG" alt="SRITHI THE COUTURE" className="h-8 sm:h-9 w-auto object-contain mb-2" style={{ filter: 'brightness(0) invert(1)', opacity: 0.95 }} />
+                <div className="font-sans text-gold text-[10px] tracking-[0.25em] font-medium">ELEGANT ETHNIC WEAR</div>
+              </div>
+              <p className="font-sans text-sm text-warm-gray leading-relaxed mb-4">Premium Indian ethnic wear, exclusively for sarees and salwar suits. Crafted with elegance, delivered with love.</p>
+              <div className="flex gap-3">
+                <a href="#" className="text-warm-gray hover:text-gold transition-colors"><Icon.Instagram className="w-5 h-5" /></a>
+                <a href="#" className="text-warm-gray hover:text-gold transition-colors"><Icon.Facebook className="w-5 h-5" /></a>
+                <a href="#" className="text-warm-gray hover:text-gold transition-colors"><Icon.Youtube className="w-5 h-5" /></a>
+              </div>
             </div>
-            <SortDropdown sort={sort} setSort={setSort} />
+
+            {/* Shop */}
+            <div>
+              <h4 className="font-serif text-gold font-semibold mb-4 text-sm tracking-wider">SHOP</h4>
+              <ul className="space-y-2 font-sans text-sm text-warm-gray">
+                {[['About Us', '#/'], ['Sarees', '#/sarees'], ['Salwars', '#/salwars'], ['New Arrivals', '#/new-arrivals'], ['Offers', '#/offers']].map(([l, h]) => (
+                  <li key={l}><a href={h} className="hover:text-gold transition-colors">{l}</a></li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Support */}
+            <div>
+              <h4 className="font-serif text-gold font-semibold mb-4 text-sm tracking-wider">SUPPORT</h4>
+              <ul className="space-y-2 font-sans text-sm text-warm-gray">
+                {[['Contact Us', '#/'], ['Shipping Information', '#/'], ['Returns & Refunds', '#/'], ['Size Guide', '#/size-guide'], ['FAQs', '#/']].map(([l, h]) => (
+                  <li key={l}><a href={h} className="hover:text-gold transition-colors">{l}</a></li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Contact */}
+            <div>
+              <h4 className="font-serif text-gold font-semibold mb-4 text-sm tracking-wider">CONTACT</h4>
+              <ul className="space-y-3 font-sans text-sm text-warm-gray">
+                <li className="flex items-start gap-2"><Icon.Phone className="w-4 h-4 text-gold mt-0.5 shrink-0" /><span>+91 89403 77744<br />+91 89403 77733</span></li>
+                <li className="flex items-center gap-2"><Icon.Mail className="w-4 h-4 text-gold shrink-0" /><span>hello@srithicouture.in</span></li>
+              </ul>
+              <div className="mt-5">
+                <h5 className="font-serif text-gold text-xs tracking-wider mb-2">POLICIES</h5>
+                <ul className="space-y-1.5 font-sans text-xs text-warm-gray">
+                  {['Privacy Policy', 'Terms & Conditions', 'Cancellation Policy'].map(p => (
+                    <li key={p}><a href="#/" className="hover:text-gold transition-colors">{p}</a></li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
 
-          <ProductGrid products={filtered} wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} />
-        </div>
-      </div>
-
-      {/* Mobile filter drawer */}
-      {filterOpen && (
-        <div className="fixed inset-0 z-50 flex sm:hidden" onClick={() => setFilterOpen(false)}>
-          <div className="overlay absolute inset-0" />
-          <div className="relative bg-cream w-72 max-h-screen overflow-y-auto p-4 z-10 ml-auto" onClick={e => e.stopPropagation()}>
-            <FilterPanel filters={filters} setFilters={setFilters} products={products} category={category} onClose={() => setFilterOpen(false)} />
+          <div className="border-t border-gray-800 py-4 text-center font-sans text-xs text-warm-gray">
+            © 2026 SRITHI THE COUTURE. All rights reserved. | Made with ❤ for Indian fashion lovers.
           </div>
-        </div>
-      )}
-    </div>
-  );
-}
+        </footer>
+      );
+    }
 
-/* ============================================================
-   PRODUCT DETAILS PAGE
-   ============================================================ */
-function ProductDetailsPage({ product, wishlist, toggleWishlist, addToCart }) {
-  const [selectedSize, setSelectedSize] = useState('');
-  const [qty, setQty] = useState(1);
-  const [activeImg, setActiveImg] = useState(0);
-  const [showGuide, setShowGuide] = useState(false);
-  const [tab, setTab] = useState('details');
+    /* ============================================================
+       PRODUCT CARD
+       ============================================================ */
+    function ProductCard({ product, wishlist, toggleWishlist, addToCart, navigate, mini }) {
+      const inWish = wishlist.includes(product.id);
+      const [hovered, setHovered] = useState(false);
+      const [selectedSize, setSelectedSize] = useState('');
 
-  const inWish = wishlist.includes(product.id);
-  const isSalwar = product.category === 'Salwars';
+      const isSalwar = product.category === 'Salwars';
 
-  const handleCart = () => {
-    if (isSalwar && !selectedSize) { alert('Please select a size.'); return; }
-    for (let i = 0; i < qty; i++) addToCart(product, selectedSize || null);
-  };
+      const handleAddToCart = () => {
+        if (isSalwar && !selectedSize) {
+          alert('Please select a size before adding to cart.');
+          return;
+        }
+        addToCart(product, selectedSize || null);
+      };
 
-  return (
-    <div className="page-enter max-w-6xl mx-auto px-4 sm:px-6 py-8">
-      {/* Breadcrumb */}
-      <nav className="flex gap-2 text-xs font-sans text-warm-gray mb-6">
-        <a href="#/" className="hover:text-maroon">Home</a>
-        <span>/</span>
-        <a href={`#/${product.category.toLowerCase()}`} className="hover:text-maroon">{product.category}</a>
-        <span>/</span>
-        <span className="text-dark-brown">{product.name}</span>
-      </nav>
+      return (
+        <div className="product-card bg-white rounded-lg overflow-hidden border border-beige/60 cursor-pointer relative group"
+          onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-        {/* Images */}
-        <div>
-          <div className="aspect-product rounded-xl overflow-hidden bg-ivory mb-3 border border-beige">
-            <img src={product.images[activeImg]} alt={product.name} onError={handleImgError} className="w-full h-full object-cover object-top" />
-          </div>
-          <div className="flex gap-2">
-            {product.images.map((img, i) => (
-              <button key={i} onClick={() => setActiveImg(i)}
-                className={`w-16 h-20 rounded overflow-hidden border-2 transition-all ${i === activeImg ? 'border-gold' : 'border-beige'}`}>
-                <img src={img} alt="" onError={handleImgError} className="w-full h-full object-cover object-top" />
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Info */}
-        <div>
           {/* Badges */}
-          <div className="flex gap-2 mb-3">
+          <div className="absolute top-2.5 left-2.5 z-10 flex flex-col gap-1.5">
             {product.isNew && <span className="badge-new">NEW</span>}
             {product.isBestSeller && <span className="badge-best">BEST SELLER</span>}
+            {product.stock <= 8 && <span className="badge-limited">LIMITED</span>}
             {product.discount >= 25 && <span className="badge-sale">{product.discount}% OFF</span>}
           </div>
 
-          <h1 className="font-serif text-2xl sm:text-3xl text-dark-brown font-semibold leading-snug mb-2">{product.name}</h1>
+          {/* Wishlist icon */}
+          <button onClick={(e) => { e.stopPropagation(); toggleWishlist(product.id); }}
+            className={`wishlist-btn absolute top-2.5 right-2.5 z-10 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center shadow transition-opacity ${hovered || inWish ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
+            aria-label="Wishlist">
+            <Icon.Heart className={`w-4 h-4 ${inWish ? 'wishlist-active' : 'text-warm-gray'}`} filled={inWish} />
+          </button>
 
-          <div className="flex items-center gap-3 mb-4">
-            <Stars rating={product.rating} />
-            <span className="text-sm font-sans text-warm-gray">({product.reviews} reviews)</span>
-          </div>
+          {/* Image */}
+          <a href={`#/product/${product.id}`} className="card-img block aspect-product bg-ivory overflow-hidden">
+            <img src={product.images[0]} alt={product.name} loading="lazy" onError={handleImgError}
+              className="w-full h-full object-cover object-top transition-transform duration-500"
+              style={{ transform: hovered ? 'scale(1.06)' : 'scale(1)' }} />
+          </a>
 
-          {/* Price */}
-          <div className="flex items-baseline gap-3 mb-4">
-            <span className="font-sans text-3xl font-bold text-maroon">{fmt(product.price)}</span>
-            <span className="font-sans text-warm-gray text-lg line-through">{fmt(product.originalPrice)}</span>
-            <span className="bg-gold/20 text-gold font-bold text-sm px-2 py-0.5 rounded font-sans">{product.discount}% OFF</span>
-          </div>
-          <p className="text-xs text-emerald-700 font-sans mb-5">✓ Inclusive of all taxes &nbsp;•&nbsp; Free delivery on this order</p>
+          {/* Info */}
+          <div className="p-3">
+            <a href={`#/product/${product.id}`}>
+              <h3 className="font-serif font-medium text-dark-brown text-sm leading-snug mb-1 hover:text-maroon transition-colors line-clamp-2">{product.name}</h3>
+            </a>
+            <Stars rating={product.rating} small />
 
-          <p className="font-sans text-sm text-warm-gray leading-relaxed mb-5">{product.description}</p>
-
-          {/* Size selector (salwar) */}
-          {isSalwar && (
-            <div className="mb-5">
-              <div className="flex items-center justify-between mb-2">
-                <span className="font-sans font-semibold text-sm text-dark-brown">Select Size</span>
-                <button onClick={() => setShowGuide(true)} className="text-xs text-gold font-sans hover:underline">Size Guide</button>
+            {/* Sizes (salwar) */}
+            {isSalwar && (
+              <div className="mt-2 mb-1">
+                <div className="text-xs text-warm-gray font-sans mb-1">Size:</div>
+                <div className="flex gap-1 flex-wrap">
+                  {product.sizes.map(sz => (
+                    <button key={sz} onClick={() => setSelectedSize(sz === selectedSize ? '' : sz)}
+                      className={`size-btn text-xs px-2 py-0.5 ${selectedSize === sz ? 'selected' : ''}`}>{sz}</button>
+                  ))}
+                </div>
               </div>
-              <div className="flex gap-2 flex-wrap">
-                {product.sizes.map(sz => (
-                  <button key={sz} onClick={() => setSelectedSize(sz === selectedSize ? '' : sz)}
-                    className={`size-btn ${selectedSize === sz ? 'selected' : ''}`}>{sz}</button>
+            )}
+
+            {/* Price */}
+            <div className="flex items-baseline gap-2 mt-2">
+              <span className="font-sans font-bold text-maroon text-base">{fmt(product.price)}</span>
+              <span className="font-sans text-warm-gray text-xs line-through">{fmt(product.originalPrice)}</span>
+            </div>
+
+            {/* Buttons */}
+            <div className="mt-3 flex gap-2">
+              <button onClick={handleAddToCart}
+                className="flex-1 btn-gold py-2 rounded text-xs font-sans tracking-wide">
+                Add to Cart
+              </button>
+              <a href={`#/product/${product.id}`}
+                className="btn-outline py-2 px-3 rounded text-xs font-sans">
+                View
+              </a>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    /* ============================================================
+       PRODUCT GRID
+       ============================================================ */
+    function ProductGrid({ products, wishlist, toggleWishlist, addToCart, navigate }) {
+      if (!products.length) return (
+        <div className="text-center py-20 text-warm-gray font-sans">
+          <p className="text-4xl mb-3">🔍</p>
+          <p className="text-lg font-serif text-dark-brown">No products found</p>
+          <p className="text-sm mt-1">Try adjusting your filters or search query.</p>
+        </div>
+      );
+      return (
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
+          {products.map(p => (
+            <ProductCard key={p.id} product={p} wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} />
+          ))}
+        </div>
+      );
+    }
+
+    /* ============================================================
+       FILTER PANEL
+       ============================================================ */
+    function FilterPanel({ filters, setFilters, products, category, onClose }) {
+      const fabrics = [...new Set(products.map(p => p.fabric))];
+      const colors = [...new Set(products.map(p => p.color))];
+      const occasions = [...new Set(products.map(p => p.occasion))];
+      const allSizes = ['S', 'M', 'L', 'XL', 'XXL'];
+
+      const toggle = (key, val) => {
+        setFilters(f => {
+          const arr = f[key] || [];
+          return { ...f, [key]: arr.includes(val) ? arr.filter(x => x !== val) : [...arr, val] };
+        });
+      };
+
+      const FilterGroup = ({ title, options, filterKey }) => {
+        const [open, setOpen] = useState(true);
+        return (
+          <div className="border-b border-beige pb-3 mb-3">
+            <button onClick={() => setOpen(!open)} className="flex items-center justify-between w-full text-left mb-2">
+              <span className="font-sans font-semibold text-dark-brown text-sm">{title}</span>
+              <Icon.Chevron className="w-4 h-4 text-warm-gray" down={!open} />
+            </button>
+            {open && (
+              <div className="space-y-1.5">
+                {options.map(opt => (
+                  <label key={opt} className="flex items-center gap-2 cursor-pointer group">
+                    <input type="checkbox" checked={(filters[filterKey] || []).includes(opt)} onChange={() => toggle(filterKey, opt)} className="rounded" />
+                    <span className="font-sans text-sm text-dark-brown group-hover:text-maroon">{opt}</span>
+                  </label>
                 ))}
+              </div>
+            )}
+          </div>
+        );
+      };
+
+      return (
+        <div className="bg-white border border-beige rounded-lg p-4 sticky top-24 max-h-screen overflow-y-auto">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="font-serif font-semibold text-dark-brown text-base">Filters</h3>
+            <div className="flex gap-2 items-center">
+              <button onClick={() => setFilters({})} className="text-xs text-maroon font-sans hover:underline">Clear All</button>
+              {onClose && <button onClick={onClose} className="sm:hidden text-warm-gray"><Icon.X className="w-4 h-4" /></button>}
+            </div>
+          </div>
+
+          {/* Price range */}
+          <div className="border-b border-beige pb-3 mb-3">
+            <p className="font-sans font-semibold text-dark-brown text-sm mb-2">Price Range</p>
+            <div className="flex items-center gap-2 text-xs text-warm-gray font-sans mb-2">
+              <span>{fmt(filters.minPrice || 0)}</span> — <span>{fmt(filters.maxPrice || 5000)}</span>
+            </div>
+            <input type="range" min="0" max="5000" step="100" value={filters.maxPrice || 5000}
+              onChange={e => setFilters(f => ({ ...f, maxPrice: Number(e.target.value) }))}
+              className="w-full" />
+          </div>
+
+          {category === 'Salwars' && <FilterGroup title="Size" options={allSizes} filterKey="sizes" />}
+          <FilterGroup title="Fabric" options={fabrics} filterKey="fabrics" />
+          <FilterGroup title="Color" options={colors} filterKey="colors" />
+          <FilterGroup title="Occasion" options={occasions} filterKey="occasions" />
+
+          {/* Discount filter */}
+          <div className="border-b border-beige pb-3 mb-3">
+            <p className="font-sans font-semibold text-dark-brown text-sm mb-2">Discount</p>
+            {[10, 20, 25, 30].map(d => (
+              <label key={d} className="flex items-center gap-2 cursor-pointer mb-1.5">
+                <input type="checkbox" checked={(filters.discounts || []).includes(d)} onChange={() => toggle('discounts', d)} />
+                <span className="font-sans text-sm text-dark-brown">{d}% & above</span>
+              </label>
+            ))}
+          </div>
+        </div>
+      );
+    }
+
+    /* ============================================================
+       SORT DROPDOWN
+       ============================================================ */
+    function SortDropdown({ sort, setSort }) {
+      const opts = [
+        { v: 'recommended', l: 'Recommended' },
+        { v: 'newest', l: 'Newest First' },
+        { v: 'price-asc', l: 'Price: Low to High' },
+        { v: 'price-desc', l: 'Price: High to Low' },
+        { v: 'discount', l: 'Highest Discount' },
+        { v: 'rating', l: 'Popularity' },
+      ];
+      return (
+        <select value={sort} onChange={e => setSort(e.target.value)}
+          className="border border-beige rounded px-3 py-2 text-sm font-sans text-dark-brown bg-white focus:outline-none focus:border-gold">
+          {opts.map(o => <option key={o.v} value={o.v}>{o.l}</option>)}
+        </select>
+      );
+    }
+
+    /* ============================================================
+       SIZE GUIDE MODAL
+       ============================================================ */
+    function SizeGuide({ onClose }) {
+      return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4" onClick={onClose}>
+          <div className="overlay absolute inset-0" />
+          <div className="relative bg-cream rounded-xl shadow-2xl max-w-lg w-full p-6 z-10" onClick={e => e.stopPropagation()}>
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="font-serif text-xl text-maroon font-semibold">Salwar Size Guide</h2>
+              <button onClick={onClose} className="text-warm-gray hover:text-maroon"><Icon.X className="w-5 h-5" /></button>
+            </div>
+            <div className="gold-divider mb-4" style={{ margin: '0 0 1rem 0' }} />
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm font-sans border-collapse">
+                <thead>
+                  <tr className="bg-maroon text-cream">
+                    {['Size', 'Bust', 'Waist', 'Hip'].map(h => <th key={h} className="py-2.5 px-4 text-left font-semibold">{h}</th>)}
+                  </tr>
+                </thead>
+                <tbody>
+                  {[['S', '34"', '28"', '36"'], ['M', '36"', '30"', '38"'], ['L', '38"', '32"', '40"'], ['XL', '40"', '34"', '42"'], ['XXL', '42"', '36"', '44"']].map(([sz, b, w, h], i) => (
+                    <tr key={sz} className={i % 2 === 0 ? 'bg-ivory' : 'bg-white'}>
+                      <td className="py-2.5 px-4 font-bold text-maroon">{sz}</td>
+                      <td className="py-2.5 px-4">{b}</td>
+                      <td className="py-2.5 px-4">{w}</td>
+                      <td className="py-2.5 px-4">{h}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-warm-gray font-sans mt-4">All measurements are in inches. If in doubt, choose a larger size.</p>
+          </div>
+        </div>
+      );
+    }
+
+    /* ============================================================
+       PRODUCT LISTING PAGE
+       ============================================================ */
+    function ProductListingPage({ category, products, wishlist, toggleWishlist, addToCart, navigate }) {
+      const [filters, setFilters] = useState({});
+      const [sort, setSort] = useState('recommended');
+      const [filterOpen, setFilterOpen] = useState(false);
+
+      const filtered = useMemo(() => {
+        let arr = products.filter(p => p.category === category);
+        if (filters.maxPrice) arr = arr.filter(p => p.price <= filters.maxPrice);
+        if (filters.fabrics?.length) arr = arr.filter(p => filters.fabrics.includes(p.fabric));
+        if (filters.colors?.length) arr = arr.filter(p => filters.colors.includes(p.color));
+        if (filters.occasions?.length) arr = arr.filter(p => filters.occasions.some(o => p.occasion.includes(o)));
+        if (filters.sizes?.length && category === 'Salwars') arr = arr.filter(p => filters.sizes.some(s => p.sizes.includes(s)));
+        if (filters.discounts?.length) arr = arr.filter(p => filters.discounts.some(d => p.discount >= d));
+
+        if (sort === 'price-asc') arr = [...arr].sort((a, b) => a.price - b.price);
+        else if (sort === 'price-desc') arr = [...arr].sort((a, b) => b.price - a.price);
+        else if (sort === 'discount') arr = [...arr].sort((a, b) => b.discount - a.discount);
+        else if (sort === 'rating') arr = [...arr].sort((a, b) => b.rating - a.rating);
+        else if (sort === 'newest') arr = arr.filter(p => p.isNew).concat(arr.filter(p => !p.isNew));
+        return arr;
+      }, [products, category, filters, sort]);
+
+      return (
+        <div className="page-enter max-w-7xl mx-auto px-4 sm:px-6 py-8">
+          {/* Page header */}
+          <div className="text-center mb-8">
+            <h1 className="font-serif text-3xl sm:text-4xl text-maroon font-semibold mb-2">
+              {category === 'Sarees' ? 'Our Saree Collection' : 'Our Salwar Suit Collection'}
+            </h1>
+            <div className="gold-divider" />
+            <p className="font-sans text-warm-gray text-sm">
+              {category === 'Sarees'
+                ? 'Discover timeless elegance — from traditional silks to modern chiffons.'
+                : 'Comfortable, stylish salwar sets for every woman, every occasion.'}
+            </p>
+          </div>
+
+          <div className="flex gap-6">
+            {/* Filter — desktop sidebar */}
+            <div className="hidden sm:block w-56 shrink-0">
+              <FilterPanel filters={filters} setFilters={setFilters} products={products} category={category} />
+            </div>
+
+            {/* Main content */}
+            <div className="flex-1 min-w-0">
+              {/* Toolbar */}
+              <div className="flex items-center justify-between mb-5 flex-wrap gap-3">
+                <div className="flex items-center gap-3">
+                  <button className="sm:hidden flex items-center gap-1.5 border border-beige rounded px-3 py-2 text-sm font-sans text-dark-brown bg-white"
+                    onClick={() => setFilterOpen(true)}>
+                    <Icon.Filter className="w-4 h-4" /> Filters
+                  </button>
+                  <span className="text-sm font-sans text-warm-gray">{filtered.length} products</span>
+                </div>
+                <SortDropdown sort={sort} setSort={setSort} />
+              </div>
+
+              <ProductGrid products={filtered} wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} />
+            </div>
+          </div>
+
+          {/* Mobile filter drawer */}
+          {filterOpen && (
+            <div className="fixed inset-0 z-50 flex sm:hidden" onClick={() => setFilterOpen(false)}>
+              <div className="overlay absolute inset-0" />
+              <div className="relative bg-cream w-72 max-h-screen overflow-y-auto p-4 z-10 ml-auto" onClick={e => e.stopPropagation()}>
+                <FilterPanel filters={filters} setFilters={setFilters} products={products} category={category} onClose={() => setFilterOpen(false)} />
               </div>
             </div>
           )}
-
-          {/* Quantity */}
-          <div className="mb-5">
-            <span className="font-sans font-semibold text-sm text-dark-brown block mb-2">Quantity</span>
-            <div className="flex items-center gap-3">
-              <button className="qty-btn" onClick={() => setQty(q => Math.max(1,q-1))}>−</button>
-              <span className="font-sans font-bold text-dark-brown w-8 text-center">{qty}</span>
-              <button className="qty-btn" onClick={() => setQty(q => q+1)}>+</button>
-            </div>
-          </div>
-
-          {/* Action buttons */}
-          <div className="flex gap-3 mb-5 flex-col sm:flex-row">
-            <button onClick={handleCart} className="btn-gold flex-1 py-3 rounded font-sans tracking-wide">Add to Cart</button>
-            <button onClick={handleCart} className="btn-maroon flex-1 py-3 rounded font-sans tracking-wide">Buy Now</button>
-            <button onClick={() => toggleWishlist(product.id)} className={`w-12 h-12 rounded border-2 flex items-center justify-center shrink-0 transition-colors ${inWish ? 'border-maroon bg-maroon/10' : 'border-beige hover:border-maroon'}`}>
-              <Icon.Heart className="w-5 h-5" filled={inWish} />
-            </button>
-          </div>
-
-          {/* Features */}
-          <div className="grid grid-cols-3 gap-2 mb-6">
-            {[['✓ Free Delivery', 'On orders above ₹999'], ['✓ Easy Returns', '7-day return policy'], ['✓ Secure Pay', 'Safe & encrypted']].map(([t,d]) => (
-              <div key={t} className="text-center border border-beige rounded p-2">
-                <p className="font-sans text-xs font-bold text-maroon">{t}</p>
-                <p className="font-sans text-xs text-warm-gray mt-0.5">{d}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Details tabs */}
-          <div>
-            <div className="flex border-b border-beige">
-              {['details','specs'].map(t => (
-                <button key={t} onClick={() => setTab(t)}
-                  className={`font-sans text-sm px-4 py-2 font-medium transition-colors border-b-2 ${tab===t ? 'text-maroon border-gold' : 'text-warm-gray border-transparent hover:text-maroon'}`}>
-                  {t === 'details' ? 'Product Details' : 'Specifications'}
-                </button>
-              ))}
-            </div>
-
-            <div className="pt-4">
-              {tab === 'details' && (
-                <dl className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm font-sans">
-                  {[
-                    ['Fabric', product.fabric],
-                    ['Color', product.color],
-                    ['Pattern', product.pattern],
-                    ['Occasion', product.occasion],
-                    ...(product.length ? [['Saree Length', product.length]] : []),
-                    ...(product.blouse ? [['Blouse', product.blouse]] : []),
-                    ...(product.setIncludes ? [['Set Includes', product.setIncludes.join(', ')]] : []),
-                  ].map(([k,v]) => (
-                    <React.Fragment key={k}>
-                      <dt className="text-warm-gray">{k}</dt>
-                      <dd className="text-dark-brown font-medium">{v}</dd>
-                    </React.Fragment>
-                  ))}
-                </dl>
-              )}
-              {tab === 'specs' && (
-                <div className="text-sm font-sans text-warm-gray space-y-1.5">
-                  <p>• Wash Care: Gentle hand wash or dry clean recommended</p>
-                  <p>• Do not bleach or tumble dry</p>
-                  <p>• Iron on low heat</p>
-                  <p>• First wash: Colors may bleed slightly — wash separately</p>
-                  <p>• Packaging: Comes in premium gift packaging</p>
-                </div>
-              )}
-            </div>
-          </div>
         </div>
-      </div>
-
-      {showGuide && <SizeGuide onClose={() => setShowGuide(false)} />}
-    </div>
-  );
-}
-
-/* ============================================================
-   CART PAGE
-   ============================================================ */
-function CartPage({ cart, updateQty, removeFromCart, navigate }) {
-  const subtotal = cart.reduce((s, i) => s + i.price * i.qty, 0);
-  const origTotal = cart.reduce((s, i) => s + i.originalPrice * i.qty, 0);
-  const discount = origTotal - subtotal;
-  const delivery = subtotal >= 999 ? 0 : 79;
-  const total = subtotal + delivery;
-
-  if (!cart.length) return (
-    <div className="page-enter max-w-2xl mx-auto px-4 py-20 text-center">
-      <div className="text-6xl mb-4">🛍️</div>
-      <h2 className="font-serif text-2xl text-dark-brown mb-2">Your Cart is Empty</h2>
-      <p className="font-sans text-warm-gray mb-6">Add some beautiful sarees or salwar sets to get started.</p>
-      <a href="#/sarees" className="btn-maroon inline-block px-8 py-3 rounded font-sans">Shop Sarees</a>
-    </div>
-  );
-
-  return (
-    <div className="page-enter max-w-6xl mx-auto px-4 sm:px-6 py-8">
-      <h1 className="font-serif text-2xl text-maroon font-semibold mb-6">Shopping Cart ({cart.reduce((s,i)=>s+i.qty,0)} items)</h1>
-
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Cart items */}
-        <div className="lg:col-span-2 space-y-4">
-          {cart.map(item => (
-            <div key={`${item.id}-${item.size}`} className="bg-white rounded-xl border border-beige p-4 flex gap-4">
-              <a href={`#/product/${item.id}`} className="w-20 h-25 shrink-0 rounded overflow-hidden bg-ivory aspect-[4/5]">
-                <img src={item.images[0]} alt={item.name} onError={handleImgError} className="w-full h-full object-cover object-top" />
-              </a>
-              <div className="flex-1 min-w-0">
-                <a href={`#/product/${item.id}`}>
-                  <h3 className="font-serif font-medium text-dark-brown leading-snug hover:text-maroon text-sm sm:text-base">{item.name}</h3>
-                </a>
-                {item.size && <p className="text-xs text-warm-gray font-sans mt-0.5">Size: <strong>{item.size}</strong></p>}
-                <p className="text-xs text-warm-gray font-sans">Category: {item.category}</p>
-                <div className="flex items-center justify-between mt-3 flex-wrap gap-2">
-                  <div className="flex items-center gap-2">
-                    <button className="qty-btn" onClick={() => updateQty(item.id, item.size, item.qty-1)}>−</button>
-                    <span className="font-sans font-bold text-dark-brown w-6 text-center text-sm">{item.qty}</span>
-                    <button className="qty-btn" onClick={() => updateQty(item.id, item.size, item.qty+1)}>+</button>
-                  </div>
-                  <div className="text-right">
-                    <div className="font-bold text-maroon font-sans">{fmt(item.price * item.qty)}</div>
-                    <div className="text-xs text-warm-gray line-through font-sans">{fmt(item.originalPrice * item.qty)}</div>
-                  </div>
-                </div>
-              </div>
-              <button onClick={() => removeFromCart(item.id, item.size)} className="text-warm-gray hover:text-maroon transition-colors shrink-0">
-                <Icon.Trash className="w-4 h-4" />
-              </button>
-            </div>
-          ))}
-        </div>
-
-        {/* Order summary */}
-        <div>
-          <div className="bg-white rounded-xl border border-beige p-5 sticky top-24">
-            <h2 className="font-serif text-lg text-dark-brown font-semibold mb-4 border-b border-beige pb-3">Order Summary</h2>
-            <div className="space-y-2.5 font-sans text-sm mb-4">
-              <div className="flex justify-between"><span className="text-warm-gray">Subtotal</span><span className="font-medium">{fmt(subtotal)}</span></div>
-              <div className="flex justify-between text-emerald-700"><span>Discount</span><span>− {fmt(discount)}</span></div>
-              <div className="flex justify-between"><span className="text-warm-gray">Delivery</span><span className={delivery === 0 ? 'text-emerald-700 font-medium' : 'font-medium'}>{delivery === 0 ? 'FREE' : fmt(delivery)}</span></div>
-              {delivery > 0 && <p className="text-xs text-warm-gray">Add {fmt(999 - subtotal)} more for free delivery</p>}
-            </div>
-            <div className="border-t border-beige pt-3 mb-5 flex justify-between font-bold font-sans text-dark-brown text-base">
-              <span>Total</span><span className="text-maroon text-lg">{fmt(total)}</span>
-            </div>
-            <a href="#/checkout" className="btn-gold w-full block text-center py-3 rounded font-sans tracking-wide">Proceed to Checkout</a>
-            <a href="#/sarees" className="block text-center text-sm font-sans text-maroon hover:underline mt-3">Continue Shopping</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-/* ============================================================
-   CHECKOUT PAGE
-   ============================================================ */
-function CheckoutPage({ cart }) {
-  const [form, setForm] = useState({ name:'', mobile:'', email:'', address:'', city:'', state:'', pin:'', payment:'cod' });
-  const [placed, setPlaced] = useState(false);
-
-  const set = (k, v) => setForm(f => ({...f, [k]: v}));
-
-  const subtotal = cart.reduce((s, i) => s + i.price * i.qty, 0);
-  const delivery = subtotal >= 999 ? 0 : 79;
-  const total = subtotal + delivery;
-
-  const submit = (e) => {
-    e.preventDefault();
-    setPlaced(true);
-  };
-
-  if (placed) return (
-    <div className="page-enter max-w-lg mx-auto px-4 py-20 text-center">
-      <div className="text-6xl mb-4">🎉</div>
-      <h2 className="font-serif text-3xl text-maroon font-semibold mb-3">Order Placed!</h2>
-      <p className="font-sans text-warm-gray mb-2">Thank you, {form.name}! Your order has been placed successfully.</p>
-      <p className="font-sans text-sm text-warm-gray mb-6">A confirmation will be sent to {form.email}.</p>
-      <div className="bg-white border border-beige rounded-xl p-5 text-left mb-6 font-sans text-sm">
-        <p><strong className="text-dark-brown">Total Paid:</strong> <span className="text-maroon font-bold">{fmt(total)}</span></p>
-        <p><strong className="text-dark-brown">Payment:</strong> {form.payment === 'cod' ? 'Cash on Delivery' : form.payment === 'upi' ? 'UPI' : 'Card'}</p>
-        <p><strong className="text-dark-brown">Expected Delivery:</strong> 4–7 business days</p>
-      </div>
-      <a href="#/" className="btn-gold inline-block px-8 py-3 rounded font-sans">Continue Shopping</a>
-    </div>
-  );
-
-  return (
-    <div className="page-enter max-w-5xl mx-auto px-4 sm:px-6 py-8">
-      <h1 className="font-serif text-2xl text-maroon font-semibold mb-6">Checkout</h1>
-      <form onSubmit={submit} className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-
-        {/* Form */}
-        <div className="lg:col-span-2 space-y-5">
-          <div className="bg-white rounded-xl border border-beige p-5">
-            <h2 className="font-serif text-base text-dark-brown font-semibold mb-4 pb-2 border-b border-beige">Delivery Information</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[['Full Name','name','text',true],['Mobile Number','mobile','tel',true],['Email Address','email','email',true],['Address','address','text',true],['City','city','text',true],['State','state','text',true],['Pincode','pin','text',true]].map(([label, key, type, req]) => (
-                <div key={key} className={key === 'address' ? 'sm:col-span-2' : ''}>
-                  <label className="block font-sans text-sm font-medium text-dark-brown mb-1">{label}</label>
-                  <input type={type} required={req} value={form[key]} onChange={e => set(key, e.target.value)}
-                    className="w-full border border-beige rounded px-3 py-2.5 text-sm font-sans focus:outline-none focus:border-gold bg-cream nl-input" />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Payment */}
-          <div className="bg-white rounded-xl border border-beige p-5">
-            <h2 className="font-serif text-base text-dark-brown font-semibold mb-4 pb-2 border-b border-beige">Payment Method</h2>
-            <div className="space-y-3">
-              {[['upi','📱 UPI Payment'],['card','💳 Credit / Debit Card'],['cod','🏠 Cash on Delivery']].map(([v,l]) => (
-                <label key={v} className="flex items-center gap-3 cursor-pointer border border-beige rounded-lg p-3 hover:border-gold transition-colors">
-                  <input type="radio" name="payment" value={v} checked={form.payment === v} onChange={() => set('payment', v)} className="accent-maroon"/>
-                  <span className="font-sans text-sm text-dark-brown font-medium">{l}</span>
-                </label>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Summary */}
-        <div>
-          <div className="bg-white rounded-xl border border-beige p-5 sticky top-24">
-            <h2 className="font-serif text-base text-dark-brown font-semibold mb-4 border-b border-beige pb-3">Order Summary</h2>
-            <div className="space-y-3 mb-4 max-h-48 overflow-y-auto">
-              {cart.map(item => (
-                <div key={`${item.id}-${item.size}`} className="flex gap-2 items-start">
-                  <img src={item.images[0]} alt="" onError={handleImgError} className="w-10 h-12 object-cover rounded shrink-0" />
-                  <div className="flex-1 min-w-0">
-                    <p className="font-sans text-xs text-dark-brown font-medium leading-tight truncate">{item.name}</p>
-                    {item.size && <p className="text-xs text-warm-gray">Size: {item.size}</p>}
-                    <p className="text-xs text-warm-gray">Qty: {item.qty}</p>
-                  </div>
-                  <p className="font-sans text-xs font-bold text-maroon shrink-0">{fmt(item.price*item.qty)}</p>
-                </div>
-              ))}
-            </div>
-            <div className="border-t border-beige pt-3 space-y-2 font-sans text-sm mb-4">
-              <div className="flex justify-between"><span className="text-warm-gray">Subtotal</span><span>{fmt(subtotal)}</span></div>
-              <div className="flex justify-between"><span className="text-warm-gray">Delivery</span><span className={delivery===0?'text-emerald-700':''}>{delivery===0?'FREE':fmt(delivery)}</span></div>
-            </div>
-            <div className="border-t border-beige pt-3 flex justify-between font-bold font-sans text-dark-brown mb-5">
-              <span>Total</span><span className="text-maroon text-lg">{fmt(total)}</span>
-            </div>
-            <button type="submit" className="btn-maroon w-full py-3 rounded font-sans tracking-wide block text-center">Place Order</button>
-          </div>
-        </div>
-
-      </form>
-    </div>
-  );
-}
-
-/* ============================================================
-   WISHLIST PAGE
-   ============================================================ */
-function WishlistPage({ wishlist, products, toggleWishlist, addToCart }) {
-  const items = products.filter(p => wishlist.includes(p.id));
-
-  if (!items.length) return (
-    <div className="page-enter max-w-2xl mx-auto px-4 py-20 text-center">
-      <div className="text-6xl mb-4">♡</div>
-      <h2 className="font-serif text-2xl text-dark-brown mb-2">Your Wishlist is Empty</h2>
-      <p className="font-sans text-warm-gray mb-6">Save your favourite sarees and salwar suits here.</p>
-      <a href="#/sarees" className="btn-maroon inline-block px-8 py-3 rounded font-sans">Explore Sarees</a>
-    </div>
-  );
-
-  return (
-    <div className="page-enter max-w-6xl mx-auto px-4 sm:px-6 py-8">
-      <h1 className="font-serif text-2xl text-maroon font-semibold mb-6">My Wishlist ({items.length} items)</h1>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {items.map(product => (
-          <div key={product.id} className="bg-white rounded-lg border border-beige overflow-hidden">
-            <a href={`#/product/${product.id}`} className="block aspect-product bg-ivory overflow-hidden">
-              <img src={product.images[0]} alt={product.name} className="w-full h-full object-cover object-top" loading="lazy" />
-            </a>
-            <div className="p-3">
-              <a href={`#/product/${product.id}`}>
-                <h3 className="font-serif text-sm text-dark-brown font-medium leading-snug hover:text-maroon mb-1 line-clamp-2">{product.name}</h3>
-              </a>
-              <div className="flex items-baseline gap-1.5 mb-3">
-                <span className="text-maroon font-bold font-sans">{fmt(product.price)}</span>
-                <span className="text-warm-gray text-xs line-through font-sans">{fmt(product.originalPrice)}</span>
-              </div>
-              <div className="flex gap-2">
-                <button onClick={() => addToCart(product, null)} className="flex-1 btn-gold py-1.5 rounded text-xs font-sans">Add to Cart</button>
-                <button onClick={() => toggleWishlist(product.id)} className="text-warm-gray hover:text-maroon border border-beige rounded p-1.5">
-                  <Icon.Trash className="w-3.5 h-3.5" />
-                </button>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-/* ============================================================
-   SEARCH RESULTS PAGE
-   ============================================================ */
-function SearchPage({ query, products, wishlist, toggleWishlist, addToCart, navigate }) {
-  const q = query.toLowerCase();
-  const results = products.filter(p =>
-    p.name.toLowerCase().includes(q) ||
-    p.fabric.toLowerCase().includes(q) ||
-    p.color.toLowerCase().includes(q) ||
-    p.pattern.toLowerCase().includes(q) ||
-    p.category.toLowerCase().includes(q) ||
-    (p.occasion && p.occasion.toLowerCase().includes(q))
-  );
-
-  return (
-    <div className="page-enter max-w-7xl mx-auto px-4 sm:px-6 py-8">
-      <div className="mb-6">
-        <h1 className="font-serif text-2xl text-dark-brown font-semibold">Search Results for "<span className="text-maroon">{query}</span>"</h1>
-        <p className="font-sans text-sm text-warm-gray mt-1">{results.length} product{results.length !== 1 ? 's' : ''} found</p>
-      </div>
-      <ProductGrid products={results} wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} />
-    </div>
-  );
-}
-
-/* ============================================================
-   HOME PAGE SECTIONS
-   ============================================================ */
-function HeroBanner() {
-  return (
-    <section className="hero-bg relative overflow-hidden" style={{minHeight: '520px'}}>
-      <div className="hero-overlay absolute inset-0" />
-      <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 py-24 sm:py-32" style={{minHeight:'520px'}}>
-        <p className="font-sans text-gold text-xs sm:text-sm tracking-widest mb-3 uppercase">New Festive Collection 2026</p>
-        <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-cream font-bold leading-tight mb-4 max-w-2xl">
-          Elegance Woven<br className="hidden sm:block" /> for You
-        </h1>
-        <p className="font-sans text-beige text-sm sm:text-base max-w-xl mb-8 leading-relaxed">
-          Discover beautiful sarees and stylish salwar suits crafted for every occasion — from everyday elegance to grand celebrations.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <a href="#/sarees" className="btn-gold px-8 py-3 rounded font-sans tracking-wider text-sm">Shop Sarees</a>
-          <a href="#/salwars" className="border-2 border-cream text-cream hover:bg-cream hover:text-dark-brown transition-all px-8 py-3 rounded font-sans tracking-wider text-sm font-semibold">Shop Salwars</a>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function CategorySection() {
-  const cats = [
-    {
-      title: 'Sarees',
-      desc: 'Discover elegant sarees for everyday style, celebrations and special occasions.',
-      btn: 'Explore Sarees',
-      link: '#/sarees',
-      img: './images/sarees/magenta-pink-saree.png',
-    },
-    {
-      title: 'Salwar Suits',
-      desc: 'Comfortable and elegant salwar sets designed for every occasion.',
-      btn: 'Explore Salwars',
-      link: '#/salwars',
-      img: './images/salwars/festive-designer.jpg',
-    },
-  ];
-
-  return (
-    <section className="py-14 px-4 bg-ivory">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-10">
-          <p className="font-sans text-gold text-xs tracking-widest uppercase mb-1">Shop by Category</p>
-          <h2 className="font-serif text-3xl text-dark-brown font-semibold">Our Collections</h2>
-          <div className="gold-divider mt-3" />
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {cats.map(c => (
-            <a key={c.title} href={c.link} className="group relative overflow-hidden rounded-2xl shadow-md" style={{minHeight:'320px'}}>
-              <img src={c.img} alt={c.title} loading="lazy" onError={handleImgError} className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark-brown/85 via-dark-brown/30 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-cream">
-                <h3 className="font-serif text-2xl font-bold mb-1">{c.title}</h3>
-                <p className="font-sans text-sm text-beige mb-4 max-w-xs">{c.desc}</p>
-                <span className="btn-gold inline-block px-5 py-2 rounded text-sm">{c.btn}</span>
-              </div>
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function SectionHeader({ sub, title }) {
-  return (
-    <div className="text-center mb-8">
-      {sub && <p className="font-sans text-gold text-xs tracking-widest uppercase mb-1">{sub}</p>}
-      <h2 className="font-serif text-2xl sm:text-3xl text-dark-brown font-semibold">{title}</h2>
-      <div className="gold-divider mt-3" />
-    </div>
-  );
-}
-
-function OfferBanner() {
-  return (
-    <section className="offer-bg relative py-16 sm:py-24 px-4 text-center overflow-hidden">
-      <div className="absolute inset-0 bg-maroon/75" />
-      <div className="relative z-10 max-w-xl mx-auto">
-        <p className="font-sans text-gold text-xs tracking-widest uppercase mb-2">Limited Time</p>
-        <h2 className="font-serif text-3xl sm:text-4xl text-cream font-bold mb-2">Festive Collection</h2>
-        <p className="font-serif text-5xl text-gold font-bold mb-3">Up to 30% OFF</p>
-        <p className="font-sans text-beige text-sm mb-7 leading-relaxed">
-          Celebrate every occasion with elegant ethnic wear at special prices.<br/>
-          Handpicked sarees & salwars for the festive season.
-        </p>
-        <a href="#/offers" className="btn-gold inline-block px-10 py-3 rounded font-sans tracking-wider text-sm">Shop Offers</a>
-      </div>
-    </section>
-  );
-}
-
-function WhyShopSection() {
-  const features = [
-    { icon: <Icon.Star2 className="w-7 h-7 text-gold" />, title: 'Premium Quality', desc: 'Carefully selected fabrics and authentic designs curated by fashion experts.' },
-    { icon: <Icon.Bag className="w-7 h-7 text-gold" />, title: 'Easy Shopping', desc: 'Simple and convenient online shopping experience, every step of the way.' },
-    { icon: <Icon.Shield className="w-7 h-7 text-gold" />, title: 'Secure Payments', desc: 'Your transactions are safe and encrypted with industry-standard security.' },
-    { icon: <Icon.Truck className="w-7 h-7 text-gold" />, title: 'Fast Delivery', desc: 'Reliable delivery across India with real-time order tracking.' },
-  ];
-
-  return (
-    <section className="py-14 px-4 bg-ivory">
-      <div className="max-w-6xl mx-auto">
-        <SectionHeader sub="Our Promise" title="Why Shop With Us" />
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
-          {features.map(f => (
-            <div key={f.title} className="bg-white rounded-xl p-5 text-center border border-beige hover:border-gold transition-colors hover:shadow-md">
-              <div className="w-14 h-14 bg-cream rounded-full flex items-center justify-center mx-auto mb-4 border border-beige">
-                {f.icon}
-              </div>
-              <h3 className="font-serif font-semibold text-dark-brown text-sm mb-2">{f.title}</h3>
-              <p className="font-sans text-warm-gray text-xs leading-relaxed">{f.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function ReviewsSection() {
-  const reviews = [
-    { name: 'Priya S.', stars: 5, text: '"Beautiful saree with excellent fabric quality. Exactly as shown in the picture. The colors are vibrant and the zari work is stunning."', product: 'Kanchipuram Silk Saree' },
-    { name: 'Divya R.', stars: 5, text: '"The salwar set looked elegant and the fitting was perfect. Received so many compliments at the family function!"', product: 'Embroidered Anarkali Salwar Set' },
-    { name: 'Meena K.', stars: 5, text: '"Super quick delivery and the packaging was premium. The organza saree is absolutely gorgeous — worth every rupee!"', product: 'Organza Embroidery Saree' },
-    { name: 'Lakshmi V.', stars: 5, text: '"I ordered the Chanderi salwar set and I am in love! The fabric is so soft and the color is exactly as pictured. Will order again."', product: 'Premium Chanderi Salwar Set' },
-  ];
-
-  return (
-    <section className="py-14 px-4 bg-cream">
-      <div className="max-w-6xl mx-auto">
-        <SectionHeader sub="Customer Love" title="What Our Customers Say" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {reviews.map((r, i) => (
-            <div key={i} className="review-card bg-white p-5 rounded-xl border border-beige">
-              <Stars rating={r.stars} />
-              <p className="font-sans text-sm text-warm-gray leading-relaxed mt-3 mb-4 italic">{r.text}</p>
-              <div>
-                <p className="font-sans font-bold text-dark-brown text-sm">— {r.name}</p>
-                <p className="font-sans text-xs text-gold">{r.product}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ============================================================
-   HOME PAGE
-   ============================================================ */
-function HomePage({ products, wishlist, toggleWishlist, addToCart, navigate }) {
-  const newArrivals = products.filter(p => p.isNew).slice(0, 4);
-  const bestSellers = products.filter(p => p.isBestSeller).slice(0, 4);
-  const sarees = products.filter(p => p.category === 'Sarees').slice(0, 4);
-  const salwars = products.filter(p => p.category === 'Salwars').slice(0, 4);
-
-  const SmallGrid = ({ items }) => (
-    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5">
-      {items.map(p => (
-        <ProductCard key={p.id} product={p} wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} mini />
-      ))}
-    </div>
-  );
-
-  return (
-    <div className="page-enter">
-      <HeroBanner />
-      <CategorySection />
-
-      {/* New Arrivals */}
-      <section className="py-12 px-4 bg-cream">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-end justify-between mb-6 flex-wrap gap-2">
-            <SectionHeader sub="Just In" title="New Arrivals" />
-            <a href="#/new-arrivals" className="font-sans text-sm text-maroon hover:underline font-medium">View All →</a>
-          </div>
-          <SmallGrid items={newArrivals} />
-        </div>
-      </section>
-
-      {/* Best Sellers */}
-      <section className="py-12 px-4 bg-ivory">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-end justify-between mb-6 flex-wrap gap-2">
-            <SectionHeader sub="Fan Favourites" title="Best Sellers" />
-            <a href="#/best-sellers" className="font-sans text-sm text-maroon hover:underline font-medium">View All →</a>
-          </div>
-          <SmallGrid items={bestSellers} />
-        </div>
-      </section>
-
-      {/* Saree Collection */}
-      <section className="py-12 px-4 bg-cream">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-end justify-between mb-6 flex-wrap gap-2">
-            <SectionHeader sub="Timeless Elegance" title="Saree Collection" />
-            <a href="#/sarees" className="font-sans text-sm text-maroon hover:underline font-medium">View All Sarees →</a>
-          </div>
-          <SmallGrid items={sarees} />
-        </div>
-      </section>
-
-      {/* Salwar Collection */}
-      <section className="py-12 px-4 bg-ivory">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-end justify-between mb-6 flex-wrap gap-2">
-            <SectionHeader sub="Modern Comfort" title="Salwar Collection" />
-            <a href="#/salwars" className="font-sans text-sm text-maroon hover:underline font-medium">View All Salwars →</a>
-          </div>
-          <SmallGrid items={salwars} />
-        </div>
-      </section>
-
-      <OfferBanner />
-      <WhyShopSection />
-      <ReviewsSection />
-    </div>
-  );
-}
-
-/* ============================================================
-   FILTERED PAGES (New Arrivals, Best Sellers, Offers)
-   ============================================================ */
-function FilteredPage({ title, sub, products, filter, wishlist, toggleWishlist, addToCart, navigate }) {
-  const filtered = useMemo(() => {
-    if (filter === 'new') return products.filter(p => p.isNew);
-    if (filter === 'best') return products.filter(p => p.isBestSeller);
-    if (filter === 'offers') return products.filter(p => p.discount >= 25);
-    return products;
-  }, [products, filter]);
-
-  const [sort, setSort] = useState('recommended');
-  const sorted = useMemo(() => {
-    let arr = [...filtered];
-    if (sort === 'price-asc') arr.sort((a,b) => a.price - b.price);
-    else if (sort === 'price-desc') arr.sort((a,b) => b.price - a.price);
-    else if (sort === 'discount') arr.sort((a,b) => b.discount - a.discount);
-    else if (sort === 'rating') arr.sort((a,b) => b.rating - a.rating);
-    return arr;
-  }, [filtered, sort]);
-
-  return (
-    <div className="page-enter max-w-7xl mx-auto px-4 sm:px-6 py-8">
-      <div className="text-center mb-8">
-        <p className="font-sans text-gold text-xs tracking-widest uppercase mb-1">{sub}</p>
-        <h1 className="font-serif text-3xl sm:text-4xl text-maroon font-semibold mb-2">{title}</h1>
-        <div className="gold-divider" />
-      </div>
-      <div className="flex justify-end mb-5">
-        <SortDropdown sort={sort} setSort={setSort} />
-      </div>
-      <ProductGrid products={sorted} wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} />
-    </div>
-  );
-}
-
-/* ============================================================
-   SIZE GUIDE PAGE
-   ============================================================ */
-function SizeGuidePage() {
-  return (
-    <div className="page-enter max-w-2xl mx-auto px-4 py-12">
-      <div className="text-center mb-8">
-        <h1 className="font-serif text-3xl text-maroon font-semibold mb-2">Salwar Size Guide</h1>
-        <div className="gold-divider" />
-        <p className="font-sans text-warm-gray text-sm mt-3">All measurements are in inches. If between sizes, we recommend choosing the larger size.</p>
-      </div>
-      <div className="bg-white rounded-xl border border-beige overflow-hidden shadow-sm">
-        <table className="w-full text-sm font-sans border-collapse">
-          <thead>
-            <tr className="bg-maroon text-cream">
-              {['Size','Bust','Waist','Hip'].map(h => <th key={h} className="py-3 px-6 text-left font-semibold">{h}</th>)}
-            </tr>
-          </thead>
-          <tbody>
-            {[['S','34"','28"','36"'],['M','36"','30"','38"'],['L','38"','32"','40"'],['XL','40"','34"','42"'],['XXL','42"','36"','44"']].map(([sz, b, w, h], i) => (
-              <tr key={sz} className={i % 2 === 0 ? 'bg-ivory' : 'bg-white'}>
-                <td className="py-3 px-6 font-bold text-maroon">{sz}</td>
-                <td className="py-3 px-6">{b}</td>
-                <td className="py-3 px-6">{w}</td>
-                <td className="py-3 px-6">{h}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <div className="mt-8 bg-cream border border-beige rounded-xl p-5">
-        <h3 className="font-serif font-semibold text-dark-brown mb-3">How to Measure</h3>
-        <ul className="font-sans text-sm text-warm-gray space-y-2">
-          <li><strong className="text-dark-brown">Bust:</strong> Measure around the fullest part of your chest, keeping the tape parallel to the ground.</li>
-          <li><strong className="text-dark-brown">Waist:</strong> Measure around the narrowest part of your waist.</li>
-          <li><strong className="text-dark-brown">Hip:</strong> Measure around the fullest part of your hips, about 20cm below your waist.</li>
-        </ul>
-      </div>
-    </div>
-  );
-}
-
-/* ============================================================
-   MAIN APP / ROUTER
-   ============================================================ */
-function App() {
-  const [cart, setCart] = useState([]);
-  const [wishlist, setWishlist] = useState([]);
-  const [toasts, setToasts] = useState([]);
-  const [page, setPage] = useState(window.location.hash || '#/');
-  const [searchQuery, setSearchQuery] = useState('');
-
-  useEffect(() => {
-    const handler = () => setPage(window.location.hash || '#/');
-    window.addEventListener('hashchange', handler);
-    return () => window.removeEventListener('hashchange', handler);
-  }, []);
-
-  const showToast = (msg) => {
-    const id = Date.now();
-    setToasts(t => [...t, { id, msg }]);
-  };
-
-  const addToCart = useCallback((product, size) => {
-    setCart(cart => {
-      const key = `${product.id}-${size}`;
-      const existing = cart.find(i => `${i.id}-${i.size}` === key);
-      if (existing) {
-        showToast(`${product.name} quantity updated`);
-        return cart.map(i => `${i.id}-${i.size}` === key ? {...i, qty: i.qty+1} : i);
-      }
-      showToast(`${product.name} added to cart`);
-      return [...cart, {...product, size, qty: 1}];
-    });
-  }, []);
-
-  const updateQty = useCallback((id, size, qty) => {
-    if (qty < 1) { removeFromCart(id, size); return; }
-    setCart(cart => cart.map(i => i.id === id && i.size === size ? {...i, qty} : i));
-  }, []);
-
-  const removeFromCart = useCallback((id, size) => {
-    setCart(cart => cart.filter(i => !(i.id === id && i.size === size)));
-    showToast('Item removed from cart');
-  }, []);
-
-  const toggleWishlist = useCallback((id) => {
-    setWishlist(w => {
-      if (w.includes(id)) { showToast('Removed from wishlist'); return w.filter(x => x !== id); }
-      showToast('Added to wishlist ♡');
-      return [...w, id];
-    });
-  }, []);
-
-  const navigate = (p, q) => {
-    if (p === 'search') { setSearchQuery(q); window.location.hash = '#/search'; }
-    else window.location.hash = `#/${p}`;
-  };
-
-  // Routing
-  const hash = page;
-
-  const renderPage = () => {
-    if (hash === '#/' || hash === '') return <HomePage products={ALL_PRODUCTS} wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} />;
-    if (hash === '#/sarees') return <ProductListingPage category="Sarees" products={ALL_PRODUCTS} wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} />;
-    if (hash === '#/salwars') return <ProductListingPage category="Salwars" products={ALL_PRODUCTS} wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} />;
-    if (hash === '#/new-arrivals') return <FilteredPage title="New Arrivals" sub="Just In" products={ALL_PRODUCTS} filter="new" wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} />;
-    if (hash === '#/best-sellers') return <FilteredPage title="Best Sellers" sub="Fan Favourites" products={ALL_PRODUCTS} filter="best" wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} />;
-    if (hash === '#/offers') return <FilteredPage title="Festive Offers" sub="Up to 30% OFF" products={ALL_PRODUCTS} filter="offers" wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} />;
-    if (hash === '#/cart') return <CartPage cart={cart} updateQty={updateQty} removeFromCart={removeFromCart} navigate={navigate} />;
-    if (hash === '#/checkout') return <CheckoutPage cart={cart} />;
-    if (hash === '#/wishlist') return <WishlistPage wishlist={wishlist} products={ALL_PRODUCTS} toggleWishlist={toggleWishlist} addToCart={addToCart} />;
-    if (hash === '#/search') return <SearchPage query={searchQuery} products={ALL_PRODUCTS} wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} />;
-    if (hash === '#/size-guide') return <SizeGuidePage />;
-
-    // Product detail route: #/product/:id
-    const match = hash.match(/^#\/product\/(\d+)$/);
-    if (match) {
-      const prod = ALL_PRODUCTS.find(p => p.id === Number(match[1]));
-      if (prod) return <ProductDetailsPage product={prod} wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} />;
+      );
     }
 
-    // 404
-    return (
-      <div className="page-enter text-center py-24 px-4">
-        <div className="text-6xl mb-4">🕌</div>
-        <h2 className="font-serif text-3xl text-dark-brown font-semibold mb-3">Page Not Found</h2>
-        <a href="#/" className="btn-maroon inline-block px-8 py-3 rounded font-sans mt-4">Back to Home</a>
-      </div>
-    );
-  };
+    /* ============================================================
+       PRODUCT DETAILS PAGE
+       ============================================================ */
+    function ProductDetailsPage({ product, wishlist, toggleWishlist, addToCart }) {
+      const [selectedSize, setSelectedSize] = useState('');
+      const [qty, setQty] = useState(1);
+      const [activeImg, setActiveImg] = useState(0);
+      const [showGuide, setShowGuide] = useState(false);
+      const [tab, setTab] = useState('details');
 
-  return (
-    <div className="min-h-screen flex flex-col bg-cream">
-      <Header cart={cart} wishlist={wishlist} navigate={navigate} page={hash} />
-      <main className="flex-1">
-        {renderPage()}
-      </main>
-      <Footer />
+      const inWish = wishlist.includes(product.id);
+      const isSalwar = product.category === 'Salwars';
 
-      {/* Toasts */}
-      {toasts.slice(-1).map(t => (
-        <Toast key={t.id} message={t.msg} onDone={() => setToasts(ts => ts.filter(x => x.id !== t.id))} />
-      ))}
-    </div>
-  );
-}
+      const handleCart = () => {
+        if (isSalwar && !selectedSize) { alert('Please select a size.'); return; }
+        for (let i = 0; i < qty; i++) addToCart(product, selectedSize || null);
+      };
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
-</script>
+      return (
+        <div className="page-enter max-w-6xl mx-auto px-4 sm:px-6 py-8">
+          {/* Breadcrumb */}
+          <nav className="flex gap-2 text-xs font-sans text-warm-gray mb-6">
+            <a href="#/" className="hover:text-maroon">Home</a>
+            <span>/</span>
+            <a href={`#/${product.category.toLowerCase()}`} className="hover:text-maroon">{product.category}</a>
+            <span>/</span>
+            <span className="text-dark-brown">{product.name}</span>
+          </nav>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            {/* Images */}
+            <div>
+              <div className="aspect-product rounded-xl overflow-hidden bg-ivory mb-3 border border-beige">
+                <img src={product.images[activeImg]} alt={product.name} onError={handleImgError} className="w-full h-full object-cover object-top" />
+              </div>
+              <div className="flex gap-2">
+                {product.images.map((img, i) => (
+                  <button key={i} onClick={() => setActiveImg(i)}
+                    className={`w-16 h-20 rounded overflow-hidden border-2 transition-all ${i === activeImg ? 'border-gold' : 'border-beige'}`}>
+                    <img src={img} alt="" onError={handleImgError} className="w-full h-full object-cover object-top" />
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Info */}
+            <div>
+              {/* Badges */}
+              <div className="flex gap-2 mb-3">
+                {product.isNew && <span className="badge-new">NEW</span>}
+                {product.isBestSeller && <span className="badge-best">BEST SELLER</span>}
+                {product.discount >= 25 && <span className="badge-sale">{product.discount}% OFF</span>}
+              </div>
+
+              <h1 className="font-serif text-2xl sm:text-3xl text-dark-brown font-semibold leading-snug mb-2">{product.name}</h1>
+
+              <div className="flex items-center gap-3 mb-4">
+                <Stars rating={product.rating} />
+                <span className="text-sm font-sans text-warm-gray">({product.reviews} reviews)</span>
+              </div>
+
+              {/* Price */}
+              <div className="flex items-baseline gap-3 mb-4">
+                <span className="font-sans text-3xl font-bold text-maroon">{fmt(product.price)}</span>
+                <span className="font-sans text-warm-gray text-lg line-through">{fmt(product.originalPrice)}</span>
+                <span className="bg-gold/20 text-gold font-bold text-sm px-2 py-0.5 rounded font-sans">{product.discount}% OFF</span>
+              </div>
+              <p className="text-xs text-emerald-700 font-sans mb-5">✓ Inclusive of all taxes &nbsp;•&nbsp; Free delivery on this order</p>
+
+              <p className="font-sans text-sm text-warm-gray leading-relaxed mb-5">{product.description}</p>
+
+              {/* Size selector (salwar) */}
+              {isSalwar && (
+                <div className="mb-5">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-sans font-semibold text-sm text-dark-brown">Select Size</span>
+                    <button onClick={() => setShowGuide(true)} className="text-xs text-gold font-sans hover:underline">Size Guide</button>
+                  </div>
+                  <div className="flex gap-2 flex-wrap">
+                    {product.sizes.map(sz => (
+                      <button key={sz} onClick={() => setSelectedSize(sz === selectedSize ? '' : sz)}
+                        className={`size-btn ${selectedSize === sz ? 'selected' : ''}`}>{sz}</button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Quantity */}
+              <div className="mb-5">
+                <span className="font-sans font-semibold text-sm text-dark-brown block mb-2">Quantity</span>
+                <div className="flex items-center gap-3">
+                  <button className="qty-btn" onClick={() => setQty(q => Math.max(1, q - 1))}>−</button>
+                  <span className="font-sans font-bold text-dark-brown w-8 text-center">{qty}</span>
+                  <button className="qty-btn" onClick={() => setQty(q => q + 1)}>+</button>
+                </div>
+              </div>
+
+              {/* Action buttons */}
+              <div className="flex gap-3 mb-5 flex-col sm:flex-row">
+                <button onClick={handleCart} className="btn-gold flex-1 py-3 rounded font-sans tracking-wide">Add to Cart</button>
+                <button onClick={handleCart} className="btn-maroon flex-1 py-3 rounded font-sans tracking-wide">Buy Now</button>
+                <button onClick={() => toggleWishlist(product.id)} className={`w-12 h-12 rounded border-2 flex items-center justify-center shrink-0 transition-colors ${inWish ? 'border-maroon bg-maroon/10' : 'border-beige hover:border-maroon'}`}>
+                  <Icon.Heart className="w-5 h-5" filled={inWish} />
+                </button>
+              </div>
+
+              {/* Features */}
+              <div className="grid grid-cols-3 gap-2 mb-6">
+                {[['✓ Free Delivery', 'On orders above ₹999'], ['✓ Easy Returns', '7-day return policy'], ['✓ Secure Pay', 'Safe & encrypted']].map(([t, d]) => (
+                  <div key={t} className="text-center border border-beige rounded p-2">
+                    <p className="font-sans text-xs font-bold text-maroon">{t}</p>
+                    <p className="font-sans text-xs text-warm-gray mt-0.5">{d}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Details tabs */}
+              <div>
+                <div className="flex border-b border-beige">
+                  {['details', 'specs'].map(t => (
+                    <button key={t} onClick={() => setTab(t)}
+                      className={`font-sans text-sm px-4 py-2 font-medium transition-colors border-b-2 ${tab === t ? 'text-maroon border-gold' : 'text-warm-gray border-transparent hover:text-maroon'}`}>
+                      {t === 'details' ? 'Product Details' : 'Specifications'}
+                    </button>
+                  ))}
+                </div>
+
+                <div className="pt-4">
+                  {tab === 'details' && (
+                    <dl className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm font-sans">
+                      {[
+                        ['Fabric', product.fabric],
+                        ['Color', product.color],
+                        ['Pattern', product.pattern],
+                        ['Occasion', product.occasion],
+                        ...(product.length ? [['Saree Length', product.length]] : []),
+                        ...(product.blouse ? [['Blouse', product.blouse]] : []),
+                        ...(product.setIncludes ? [['Set Includes', product.setIncludes.join(', ')]] : []),
+                      ].map(([k, v]) => (
+                        <React.Fragment key={k}>
+                          <dt className="text-warm-gray">{k}</dt>
+                          <dd className="text-dark-brown font-medium">{v}</dd>
+                        </React.Fragment>
+                      ))}
+                    </dl>
+                  )}
+                  {tab === 'specs' && (
+                    <div className="text-sm font-sans text-warm-gray space-y-1.5">
+                      <p>• Wash Care: Gentle hand wash or dry clean recommended</p>
+                      <p>• Do not bleach or tumble dry</p>
+                      <p>• Iron on low heat</p>
+                      <p>• First wash: Colors may bleed slightly — wash separately</p>
+                      <p>• Packaging: Comes in premium gift packaging</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {showGuide && <SizeGuide onClose={() => setShowGuide(false)} />}
+        </div>
+      );
+    }
+
+    /* ============================================================
+       CART PAGE
+       ============================================================ */
+    function CartPage({ cart, updateQty, removeFromCart, navigate }) {
+      const subtotal = cart.reduce((s, i) => s + i.price * i.qty, 0);
+      const origTotal = cart.reduce((s, i) => s + i.originalPrice * i.qty, 0);
+      const discount = origTotal - subtotal;
+      const delivery = subtotal >= 999 ? 0 : 79;
+      const total = subtotal + delivery;
+
+      if (!cart.length) return (
+        <div className="page-enter max-w-2xl mx-auto px-4 py-20 text-center">
+          <div className="text-6xl mb-4">🛍️</div>
+          <h2 className="font-serif text-2xl text-dark-brown mb-2">Your Cart is Empty</h2>
+          <p className="font-sans text-warm-gray mb-6">Add some beautiful sarees or salwar sets to get started.</p>
+          <a href="#/sarees" className="btn-maroon inline-block px-8 py-3 rounded font-sans">Shop Sarees</a>
+        </div>
+      );
+
+      return (
+        <div className="page-enter max-w-6xl mx-auto px-4 sm:px-6 py-8">
+          <h1 className="font-serif text-2xl text-maroon font-semibold mb-6">Shopping Cart ({cart.reduce((s, i) => s + i.qty, 0)} items)</h1>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Cart items */}
+            <div className="lg:col-span-2 space-y-4">
+              {cart.map(item => (
+                <div key={`${item.id}-${item.size}`} className="bg-white rounded-xl border border-beige p-4 flex gap-4">
+                  <a href={`#/product/${item.id}`} className="w-20 h-25 shrink-0 rounded overflow-hidden bg-ivory aspect-[4/5]">
+                    <img src={item.images[0]} alt={item.name} onError={handleImgError} className="w-full h-full object-cover object-top" />
+                  </a>
+                  <div className="flex-1 min-w-0">
+                    <a href={`#/product/${item.id}`}>
+                      <h3 className="font-serif font-medium text-dark-brown leading-snug hover:text-maroon text-sm sm:text-base">{item.name}</h3>
+                    </a>
+                    {item.size && <p className="text-xs text-warm-gray font-sans mt-0.5">Size: <strong>{item.size}</strong></p>}
+                    <p className="text-xs text-warm-gray font-sans">Category: {item.category}</p>
+                    <div className="flex items-center justify-between mt-3 flex-wrap gap-2">
+                      <div className="flex items-center gap-2">
+                        <button className="qty-btn" onClick={() => updateQty(item.id, item.size, item.qty - 1)}>−</button>
+                        <span className="font-sans font-bold text-dark-brown w-6 text-center text-sm">{item.qty}</span>
+                        <button className="qty-btn" onClick={() => updateQty(item.id, item.size, item.qty + 1)}>+</button>
+                      </div>
+                      <div className="text-right">
+                        <div className="font-bold text-maroon font-sans">{fmt(item.price * item.qty)}</div>
+                        <div className="text-xs text-warm-gray line-through font-sans">{fmt(item.originalPrice * item.qty)}</div>
+                      </div>
+                    </div>
+                  </div>
+                  <button onClick={() => removeFromCart(item.id, item.size)} className="text-warm-gray hover:text-maroon transition-colors shrink-0">
+                    <Icon.Trash className="w-4 h-4" />
+                  </button>
+                </div>
+              ))}
+            </div>
+
+            {/* Order summary */}
+            <div>
+              <div className="bg-white rounded-xl border border-beige p-5 sticky top-24">
+                <h2 className="font-serif text-lg text-dark-brown font-semibold mb-4 border-b border-beige pb-3">Order Summary</h2>
+                <div className="space-y-2.5 font-sans text-sm mb-4">
+                  <div className="flex justify-between"><span className="text-warm-gray">Subtotal</span><span className="font-medium">{fmt(subtotal)}</span></div>
+                  <div className="flex justify-between text-emerald-700"><span>Discount</span><span>− {fmt(discount)}</span></div>
+                  <div className="flex justify-between"><span className="text-warm-gray">Delivery</span><span className={delivery === 0 ? 'text-emerald-700 font-medium' : 'font-medium'}>{delivery === 0 ? 'FREE' : fmt(delivery)}</span></div>
+                  {delivery > 0 && <p className="text-xs text-warm-gray">Add {fmt(999 - subtotal)} more for free delivery</p>}
+                </div>
+                <div className="border-t border-beige pt-3 mb-5 flex justify-between font-bold font-sans text-dark-brown text-base">
+                  <span>Total</span><span className="text-maroon text-lg">{fmt(total)}</span>
+                </div>
+                <a href="#/checkout" className="btn-gold w-full block text-center py-3 rounded font-sans tracking-wide">Proceed to Checkout</a>
+                <a href="#/sarees" className="block text-center text-sm font-sans text-maroon hover:underline mt-3">Continue Shopping</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    /* ============================================================
+       CHECKOUT PAGE
+       ============================================================ */
+    function CheckoutPage({ cart }) {
+      const [form, setForm] = useState({ name: '', mobile: '', email: '', address: '', city: '', state: '', pin: '', payment: 'cod' });
+      const [placed, setPlaced] = useState(false);
+
+      const set = (k, v) => setForm(f => ({ ...f, [k]: v }));
+
+      const subtotal = cart.reduce((s, i) => s + i.price * i.qty, 0);
+      const delivery = subtotal >= 999 ? 0 : 79;
+      const total = subtotal + delivery;
+
+      const submit = (e) => {
+        e.preventDefault();
+        setPlaced(true);
+      };
+
+      if (placed) return (
+        <div className="page-enter max-w-lg mx-auto px-4 py-20 text-center">
+          <div className="text-6xl mb-4">🎉</div>
+          <h2 className="font-serif text-3xl text-maroon font-semibold mb-3">Order Placed!</h2>
+          <p className="font-sans text-warm-gray mb-2">Thank you, {form.name}! Your order has been placed successfully.</p>
+          <p className="font-sans text-sm text-warm-gray mb-6">A confirmation will be sent to {form.email}.</p>
+          <div className="bg-white border border-beige rounded-xl p-5 text-left mb-6 font-sans text-sm">
+            <p><strong className="text-dark-brown">Total Paid:</strong> <span className="text-maroon font-bold">{fmt(total)}</span></p>
+            <p><strong className="text-dark-brown">Payment:</strong> {form.payment === 'cod' ? 'Cash on Delivery' : form.payment === 'upi' ? 'UPI' : 'Card'}</p>
+            <p><strong className="text-dark-brown">Expected Delivery:</strong> 4–7 business days</p>
+          </div>
+          <a href="#/" className="btn-gold inline-block px-8 py-3 rounded font-sans">Continue Shopping</a>
+        </div>
+      );
+
+      return (
+        <div className="page-enter max-w-5xl mx-auto px-4 sm:px-6 py-8">
+          <h1 className="font-serif text-2xl text-maroon font-semibold mb-6">Checkout</h1>
+          <form onSubmit={submit} className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            {/* Form */}
+            <div className="lg:col-span-2 space-y-5">
+              <div className="bg-white rounded-xl border border-beige p-5">
+                <h2 className="font-serif text-base text-dark-brown font-semibold mb-4 pb-2 border-b border-beige">Delivery Information</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[['Full Name', 'name', 'text', true], ['Mobile Number', 'mobile', 'tel', true], ['Email Address', 'email', 'email', true], ['Address', 'address', 'text', true], ['City', 'city', 'text', true], ['State', 'state', 'text', true], ['Pincode', 'pin', 'text', true]].map(([label, key, type, req]) => (
+                    <div key={key} className={key === 'address' ? 'sm:col-span-2' : ''}>
+                      <label className="block font-sans text-sm font-medium text-dark-brown mb-1">{label}</label>
+                      <input type={type} required={req} value={form[key]} onChange={e => set(key, e.target.value)}
+                        className="w-full border border-beige rounded px-3 py-2.5 text-sm font-sans focus:outline-none focus:border-gold bg-cream nl-input" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Payment */}
+              <div className="bg-white rounded-xl border border-beige p-5">
+                <h2 className="font-serif text-base text-dark-brown font-semibold mb-4 pb-2 border-b border-beige">Payment Method</h2>
+                <div className="space-y-3">
+                  {[['upi', '📱 UPI Payment'], ['card', '💳 Credit / Debit Card'], ['cod', '🏠 Cash on Delivery']].map(([v, l]) => (
+                    <label key={v} className="flex items-center gap-3 cursor-pointer border border-beige rounded-lg p-3 hover:border-gold transition-colors">
+                      <input type="radio" name="payment" value={v} checked={form.payment === v} onChange={() => set('payment', v)} className="accent-maroon" />
+                      <span className="font-sans text-sm text-dark-brown font-medium">{l}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Summary */}
+            <div>
+              <div className="bg-white rounded-xl border border-beige p-5 sticky top-24">
+                <h2 className="font-serif text-base text-dark-brown font-semibold mb-4 border-b border-beige pb-3">Order Summary</h2>
+                <div className="space-y-3 mb-4 max-h-48 overflow-y-auto">
+                  {cart.map(item => (
+                    <div key={`${item.id}-${item.size}`} className="flex gap-2 items-start">
+                      <img src={item.images[0]} alt="" onError={handleImgError} className="w-10 h-12 object-cover rounded shrink-0" />
+                      <div className="flex-1 min-w-0">
+                        <p className="font-sans text-xs text-dark-brown font-medium leading-tight truncate">{item.name}</p>
+                        {item.size && <p className="text-xs text-warm-gray">Size: {item.size}</p>}
+                        <p className="text-xs text-warm-gray">Qty: {item.qty}</p>
+                      </div>
+                      <p className="font-sans text-xs font-bold text-maroon shrink-0">{fmt(item.price * item.qty)}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="border-t border-beige pt-3 space-y-2 font-sans text-sm mb-4">
+                  <div className="flex justify-between"><span className="text-warm-gray">Subtotal</span><span>{fmt(subtotal)}</span></div>
+                  <div className="flex justify-between"><span className="text-warm-gray">Delivery</span><span className={delivery === 0 ? 'text-emerald-700' : ''}>{delivery === 0 ? 'FREE' : fmt(delivery)}</span></div>
+                </div>
+                <div className="border-t border-beige pt-3 flex justify-between font-bold font-sans text-dark-brown mb-5">
+                  <span>Total</span><span className="text-maroon text-lg">{fmt(total)}</span>
+                </div>
+                <button type="submit" className="btn-maroon w-full py-3 rounded font-sans tracking-wide block text-center">Place Order</button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      );
+    }
+
+    /* ============================================================
+       WISHLIST PAGE
+       ============================================================ */
+    function WishlistPage({ wishlist, products, toggleWishlist, addToCart }) {
+      const items = products.filter(p => wishlist.includes(p.id));
+
+      if (!items.length) return (
+        <div className="page-enter max-w-2xl mx-auto px-4 py-20 text-center">
+          <div className="text-6xl mb-4">♡</div>
+          <h2 className="font-serif text-2xl text-dark-brown mb-2">Your Wishlist is Empty</h2>
+          <p className="font-sans text-warm-gray mb-6">Save your favourite sarees and salwar suits here.</p>
+          <a href="#/sarees" className="btn-maroon inline-block px-8 py-3 rounded font-sans">Explore Sarees</a>
+        </div>
+      );
+
+      return (
+        <div className="page-enter max-w-6xl mx-auto px-4 sm:px-6 py-8">
+          <h1 className="font-serif text-2xl text-maroon font-semibold mb-6">My Wishlist ({items.length} items)</h1>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {items.map(product => (
+              <div key={product.id} className="bg-white rounded-lg border border-beige overflow-hidden">
+                <a href={`#/product/${product.id}`} className="block aspect-product bg-ivory overflow-hidden">
+                  <img src={product.images[0]} alt={product.name} className="w-full h-full object-cover object-top" loading="lazy" />
+                </a>
+                <div className="p-3">
+                  <a href={`#/product/${product.id}`}>
+                    <h3 className="font-serif text-sm text-dark-brown font-medium leading-snug hover:text-maroon mb-1 line-clamp-2">{product.name}</h3>
+                  </a>
+                  <div className="flex items-baseline gap-1.5 mb-3">
+                    <span className="text-maroon font-bold font-sans">{fmt(product.price)}</span>
+                    <span className="text-warm-gray text-xs line-through font-sans">{fmt(product.originalPrice)}</span>
+                  </div>
+                  <div className="flex gap-2">
+                    <button onClick={() => addToCart(product, null)} className="flex-1 btn-gold py-1.5 rounded text-xs font-sans">Add to Cart</button>
+                    <button onClick={() => toggleWishlist(product.id)} className="text-warm-gray hover:text-maroon border border-beige rounded p-1.5">
+                      <Icon.Trash className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    }
+
+    /* ============================================================
+       SEARCH RESULTS PAGE
+       ============================================================ */
+    function SearchPage({ query, products, wishlist, toggleWishlist, addToCart, navigate }) {
+      const q = query.toLowerCase();
+      const results = products.filter(p =>
+        p.name.toLowerCase().includes(q) ||
+        p.fabric.toLowerCase().includes(q) ||
+        p.color.toLowerCase().includes(q) ||
+        p.pattern.toLowerCase().includes(q) ||
+        p.category.toLowerCase().includes(q) ||
+        (p.occasion && p.occasion.toLowerCase().includes(q))
+      );
+
+      return (
+        <div className="page-enter max-w-7xl mx-auto px-4 sm:px-6 py-8">
+          <div className="mb-6">
+            <h1 className="font-serif text-2xl text-dark-brown font-semibold">Search Results for "<span className="text-maroon">{query}</span>"</h1>
+            <p className="font-sans text-sm text-warm-gray mt-1">{results.length} product{results.length !== 1 ? 's' : ''} found</p>
+          </div>
+          <ProductGrid products={results} wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} />
+        </div>
+      );
+    }
+
+    /* ============================================================
+       HOME PAGE SECTIONS
+       ============================================================ */
+    function HeroBanner() {
+      return (
+        <section className="hero-bg relative overflow-hidden" style={{ minHeight: '520px' }}>
+          <div className="hero-overlay absolute inset-0" />
+          <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 py-24 sm:py-32" style={{ minHeight: '520px' }}>
+            <p className="font-sans text-gold text-xs sm:text-sm tracking-widest mb-3 uppercase">New Festive Collection 2026</p>
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-cream font-bold leading-tight mb-4 max-w-2xl">
+              Elegance Woven<br className="hidden sm:block" /> for You
+            </h1>
+            <p className="font-sans text-beige text-sm sm:text-base max-w-xl mb-8 leading-relaxed">
+              Discover beautiful sarees and stylish salwar suits crafted for every occasion — from everyday elegance to grand celebrations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a href="#/sarees" className="btn-gold px-8 py-3 rounded font-sans tracking-wider text-sm">Shop Sarees</a>
+              <a href="#/salwars" className="border-2 border-cream text-cream hover:bg-cream hover:text-dark-brown transition-all px-8 py-3 rounded font-sans tracking-wider text-sm font-semibold">Shop Salwars</a>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    function CategorySection() {
+      const cats = [
+        {
+          title: 'Sarees',
+          desc: 'Discover elegant sarees for everyday style, celebrations and special occasions.',
+          btn: 'Explore Sarees',
+          link: '#/sarees',
+          img: './images/sarees/magenta-pink-saree.png',
+        },
+        {
+          title: 'Salwar Suits',
+          desc: 'Comfortable and elegant salwar sets designed for every occasion.',
+          btn: 'Explore Salwars',
+          link: '#/salwars',
+          img: './images/salwars/festive-designer.jpg',
+        },
+      ];
+
+      return (
+        <section className="py-14 px-4 bg-ivory">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-10">
+              <p className="font-sans text-gold text-xs tracking-widest uppercase mb-1">Shop by Category</p>
+              <h2 className="font-serif text-3xl text-dark-brown font-semibold">Our Collections</h2>
+              <div className="gold-divider mt-3" />
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {cats.map(c => (
+                <a key={c.title} href={c.link} className="group relative overflow-hidden rounded-2xl shadow-md" style={{ minHeight: '320px' }}>
+                  <img src={c.img} alt={c.title} loading="lazy" onError={handleImgError} className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark-brown/85 via-dark-brown/30 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-cream">
+                    <h3 className="font-serif text-2xl font-bold mb-1">{c.title}</h3>
+                    <p className="font-sans text-sm text-beige mb-4 max-w-xs">{c.desc}</p>
+                    <span className="btn-gold inline-block px-5 py-2 rounded text-sm">{c.btn}</span>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    function SectionHeader({ sub, title }) {
+      return (
+        <div className="text-center mb-8">
+          {sub && <p className="font-sans text-gold text-xs tracking-widest uppercase mb-1">{sub}</p>}
+          <h2 className="font-serif text-2xl sm:text-3xl text-dark-brown font-semibold">{title}</h2>
+          <div className="gold-divider mt-3" />
+        </div>
+      );
+    }
+
+    function OfferBanner() {
+      return (
+        <section className="offer-bg relative py-16 sm:py-24 px-4 text-center overflow-hidden">
+          <div className="absolute inset-0 bg-maroon/75" />
+          <div className="relative z-10 max-w-xl mx-auto">
+            <p className="font-sans text-gold text-xs tracking-widest uppercase mb-2">Limited Time</p>
+            <h2 className="font-serif text-3xl sm:text-4xl text-cream font-bold mb-2">Festive Collection</h2>
+            <p className="font-serif text-5xl text-gold font-bold mb-3">Up to 30% OFF</p>
+            <p className="font-sans text-beige text-sm mb-7 leading-relaxed">
+              Celebrate every occasion with elegant ethnic wear at special prices.<br />
+              Handpicked sarees & salwars for the festive season.
+            </p>
+            <a href="#/offers" className="btn-gold inline-block px-10 py-3 rounded font-sans tracking-wider text-sm">Shop Offers</a>
+          </div>
+        </section>
+      );
+    }
+
+    function WhyShopSection() {
+      const features = [
+        { icon: <Icon.Star2 className="w-7 h-7 text-gold" />, title: 'Premium Quality', desc: 'Carefully selected fabrics and authentic designs curated by fashion experts.' },
+        { icon: <Icon.Bag className="w-7 h-7 text-gold" />, title: 'Easy Shopping', desc: 'Simple and convenient online shopping experience, every step of the way.' },
+        { icon: <Icon.Shield className="w-7 h-7 text-gold" />, title: 'Secure Payments', desc: 'Your transactions are safe and encrypted with industry-standard security.' },
+        { icon: <Icon.Truck className="w-7 h-7 text-gold" />, title: 'Fast Delivery', desc: 'Reliable delivery across India with real-time order tracking.' },
+      ];
+
+      return (
+        <section className="py-14 px-4 bg-ivory">
+          <div className="max-w-6xl mx-auto">
+            <SectionHeader sub="Our Promise" title="Why Shop With Us" />
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+              {features.map(f => (
+                <div key={f.title} className="bg-white rounded-xl p-5 text-center border border-beige hover:border-gold transition-colors hover:shadow-md">
+                  <div className="w-14 h-14 bg-cream rounded-full flex items-center justify-center mx-auto mb-4 border border-beige">
+                    {f.icon}
+                  </div>
+                  <h3 className="font-serif font-semibold text-dark-brown text-sm mb-2">{f.title}</h3>
+                  <p className="font-sans text-warm-gray text-xs leading-relaxed">{f.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    function ReviewsSection() {
+      const reviews = [
+        { name: 'Priya S.', stars: 5, text: '"Beautiful saree with excellent fabric quality. Exactly as shown in the picture. The colors are vibrant and the zari work is stunning."', product: 'Kanchipuram Silk Saree' },
+        { name: 'Divya R.', stars: 5, text: '"The salwar set looked elegant and the fitting was perfect. Received so many compliments at the family function!"', product: 'Embroidered Anarkali Salwar Set' },
+        { name: 'Meena K.', stars: 5, text: '"Super quick delivery and the packaging was premium. The organza saree is absolutely gorgeous — worth every rupee!"', product: 'Organza Embroidery Saree' },
+        { name: 'Lakshmi V.', stars: 5, text: '"I ordered the Chanderi salwar set and I am in love! The fabric is so soft and the color is exactly as pictured. Will order again."', product: 'Premium Chanderi Salwar Set' },
+      ];
+
+      return (
+        <section className="py-14 px-4 bg-cream">
+          <div className="max-w-6xl mx-auto">
+            <SectionHeader sub="Customer Love" title="What Our Customers Say" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {reviews.map((r, i) => (
+                <div key={i} className="review-card bg-white p-5 rounded-xl border border-beige">
+                  <Stars rating={r.stars} />
+                  <p className="font-sans text-sm text-warm-gray leading-relaxed mt-3 mb-4 italic">{r.text}</p>
+                  <div>
+                    <p className="font-sans font-bold text-dark-brown text-sm">— {r.name}</p>
+                    <p className="font-sans text-xs text-gold">{r.product}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    /* ============================================================
+       HOME PAGE
+       ============================================================ */
+    function HomePage({ products, wishlist, toggleWishlist, addToCart, navigate }) {
+      const newArrivals = products.filter(p => p.isNew).slice(0, 4);
+      const bestSellers = products.filter(p => p.isBestSeller).slice(0, 4);
+      const sarees = products.filter(p => p.category === 'Sarees').slice(0, 4);
+      const salwars = products.filter(p => p.category === 'Salwars').slice(0, 4);
+
+      const SmallGrid = ({ items }) => (
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5">
+          {items.map(p => (
+            <ProductCard key={p.id} product={p} wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} mini />
+          ))}
+        </div>
+      );
+
+      return (
+        <div className="page-enter">
+          <HeroBanner />
+          <CategorySection />
+
+          {/* New Arrivals */}
+          <section className="py-12 px-4 bg-cream">
+            <div className="max-w-7xl mx-auto">
+              <div className="flex items-end justify-between mb-6 flex-wrap gap-2">
+                <SectionHeader sub="Just In" title="New Arrivals" />
+                <a href="#/new-arrivals" className="font-sans text-sm text-maroon hover:underline font-medium">View All →</a>
+              </div>
+              <SmallGrid items={newArrivals} />
+            </div>
+          </section>
+
+          {/* Best Sellers */}
+          <section className="py-12 px-4 bg-ivory">
+            <div className="max-w-7xl mx-auto">
+              <div className="flex items-end justify-between mb-6 flex-wrap gap-2">
+                <SectionHeader sub="Fan Favourites" title="Best Sellers" />
+                <a href="#/best-sellers" className="font-sans text-sm text-maroon hover:underline font-medium">View All →</a>
+              </div>
+              <SmallGrid items={bestSellers} />
+            </div>
+          </section>
+
+          {/* Saree Collection */}
+          <section className="py-12 px-4 bg-cream">
+            <div className="max-w-7xl mx-auto">
+              <div className="flex items-end justify-between mb-6 flex-wrap gap-2">
+                <SectionHeader sub="Timeless Elegance" title="Saree Collection" />
+                <a href="#/sarees" className="font-sans text-sm text-maroon hover:underline font-medium">View All Sarees →</a>
+              </div>
+              <SmallGrid items={sarees} />
+            </div>
+          </section>
+
+          {/* Salwar Collection */}
+          <section className="py-12 px-4 bg-ivory">
+            <div className="max-w-7xl mx-auto">
+              <div className="flex items-end justify-between mb-6 flex-wrap gap-2">
+                <SectionHeader sub="Modern Comfort" title="Salwar Collection" />
+                <a href="#/salwars" className="font-sans text-sm text-maroon hover:underline font-medium">View All Salwars →</a>
+              </div>
+              <SmallGrid items={salwars} />
+            </div>
+          </section>
+
+          <OfferBanner />
+          <WhyShopSection />
+          <ReviewsSection />
+        </div>
+      );
+    }
+
+    /* ============================================================
+       FILTERED PAGES (New Arrivals, Best Sellers, Offers)
+       ============================================================ */
+    function FilteredPage({ title, sub, products, filter, wishlist, toggleWishlist, addToCart, navigate }) {
+      const filtered = useMemo(() => {
+        if (filter === 'new') return products.filter(p => p.isNew);
+        if (filter === 'best') return products.filter(p => p.isBestSeller);
+        if (filter === 'offers') return products.filter(p => p.discount >= 25);
+        return products;
+      }, [products, filter]);
+
+      const [sort, setSort] = useState('recommended');
+      const sorted = useMemo(() => {
+        let arr = [...filtered];
+        if (sort === 'price-asc') arr.sort((a, b) => a.price - b.price);
+        else if (sort === 'price-desc') arr.sort((a, b) => b.price - a.price);
+        else if (sort === 'discount') arr.sort((a, b) => b.discount - a.discount);
+        else if (sort === 'rating') arr.sort((a, b) => b.rating - a.rating);
+        return arr;
+      }, [filtered, sort]);
+
+      return (
+        <div className="page-enter max-w-7xl mx-auto px-4 sm:px-6 py-8">
+          <div className="text-center mb-8">
+            <p className="font-sans text-gold text-xs tracking-widest uppercase mb-1">{sub}</p>
+            <h1 className="font-serif text-3xl sm:text-4xl text-maroon font-semibold mb-2">{title}</h1>
+            <div className="gold-divider" />
+          </div>
+          <div className="flex justify-end mb-5">
+            <SortDropdown sort={sort} setSort={setSort} />
+          </div>
+          <ProductGrid products={sorted} wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} />
+        </div>
+      );
+    }
+
+    /* ============================================================
+       SIZE GUIDE PAGE
+       ============================================================ */
+    function SizeGuidePage() {
+      return (
+        <div className="page-enter max-w-2xl mx-auto px-4 py-12">
+          <div className="text-center mb-8">
+            <h1 className="font-serif text-3xl text-maroon font-semibold mb-2">Salwar Size Guide</h1>
+            <div className="gold-divider" />
+            <p className="font-sans text-warm-gray text-sm mt-3">All measurements are in inches. If between sizes, we recommend choosing the larger size.</p>
+          </div>
+          <div className="bg-white rounded-xl border border-beige overflow-hidden shadow-sm">
+            <table className="w-full text-sm font-sans border-collapse">
+              <thead>
+                <tr className="bg-maroon text-cream">
+                  {['Size', 'Bust', 'Waist', 'Hip'].map(h => <th key={h} className="py-3 px-6 text-left font-semibold">{h}</th>)}
+                </tr>
+              </thead>
+              <tbody>
+                {[['S', '34"', '28"', '36"'], ['M', '36"', '30"', '38"'], ['L', '38"', '32"', '40"'], ['XL', '40"', '34"', '42"'], ['XXL', '42"', '36"', '44"']].map(([sz, b, w, h], i) => (
+                  <tr key={sz} className={i % 2 === 0 ? 'bg-ivory' : 'bg-white'}>
+                    <td className="py-3 px-6 font-bold text-maroon">{sz}</td>
+                    <td className="py-3 px-6">{b}</td>
+                    <td className="py-3 px-6">{w}</td>
+                    <td className="py-3 px-6">{h}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-8 bg-cream border border-beige rounded-xl p-5">
+            <h3 className="font-serif font-semibold text-dark-brown mb-3">How to Measure</h3>
+            <ul className="font-sans text-sm text-warm-gray space-y-2">
+              <li><strong className="text-dark-brown">Bust:</strong> Measure around the fullest part of your chest, keeping the tape parallel to the ground.</li>
+              <li><strong className="text-dark-brown">Waist:</strong> Measure around the narrowest part of your waist.</li>
+              <li><strong className="text-dark-brown">Hip:</strong> Measure around the fullest part of your hips, about 20cm below your waist.</li>
+            </ul>
+          </div>
+        </div>
+      );
+    }
+
+    /* ============================================================
+       MAIN APP / ROUTER
+       ============================================================ */
+    function App() {
+      const [cart, setCart] = useState([]);
+      const [wishlist, setWishlist] = useState([]);
+      const [toasts, setToasts] = useState([]);
+      const [page, setPage] = useState(window.location.hash || '#/');
+      const [searchQuery, setSearchQuery] = useState('');
+
+      useEffect(() => {
+        const handler = () => setPage(window.location.hash || '#/');
+        window.addEventListener('hashchange', handler);
+        return () => window.removeEventListener('hashchange', handler);
+      }, []);
+
+      const showToast = (msg) => {
+        const id = Date.now();
+        setToasts(t => [...t, { id, msg }]);
+      };
+
+      const addToCart = useCallback((product, size) => {
+        setCart(cart => {
+          const key = `${product.id}-${size}`;
+          const existing = cart.find(i => `${i.id}-${i.size}` === key);
+          if (existing) {
+            showToast(`${product.name} quantity updated`);
+            return cart.map(i => `${i.id}-${i.size}` === key ? { ...i, qty: i.qty + 1 } : i);
+          }
+          showToast(`${product.name} added to cart`);
+          return [...cart, { ...product, size, qty: 1 }];
+        });
+      }, []);
+
+      const updateQty = useCallback((id, size, qty) => {
+        if (qty < 1) { removeFromCart(id, size); return; }
+        setCart(cart => cart.map(i => i.id === id && i.size === size ? { ...i, qty } : i));
+      }, []);
+
+      const removeFromCart = useCallback((id, size) => {
+        setCart(cart => cart.filter(i => !(i.id === id && i.size === size)));
+        showToast('Item removed from cart');
+      }, []);
+
+      const toggleWishlist = useCallback((id) => {
+        setWishlist(w => {
+          if (w.includes(id)) { showToast('Removed from wishlist'); return w.filter(x => x !== id); }
+          showToast('Added to wishlist ♡');
+          return [...w, id];
+        });
+      }, []);
+
+      const navigate = (p, q) => {
+        if (p === 'search') { setSearchQuery(q); window.location.hash = '#/search'; }
+        else window.location.hash = `#/${p}`;
+      };
+
+      // Routing
+      const hash = page;
+
+      const renderPage = () => {
+        if (hash === '#/' || hash === '') return <HomePage products={ALL_PRODUCTS} wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} />;
+        if (hash === '#/sarees') return <ProductListingPage category="Sarees" products={ALL_PRODUCTS} wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} />;
+        if (hash === '#/salwars') return <ProductListingPage category="Salwars" products={ALL_PRODUCTS} wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} />;
+        if (hash === '#/new-arrivals') return <FilteredPage title="New Arrivals" sub="Just In" products={ALL_PRODUCTS} filter="new" wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} />;
+        if (hash === '#/best-sellers') return <FilteredPage title="Best Sellers" sub="Fan Favourites" products={ALL_PRODUCTS} filter="best" wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} />;
+        if (hash === '#/offers') return <FilteredPage title="Festive Offers" sub="Up to 30% OFF" products={ALL_PRODUCTS} filter="offers" wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} />;
+        if (hash === '#/cart') return <CartPage cart={cart} updateQty={updateQty} removeFromCart={removeFromCart} navigate={navigate} />;
+        if (hash === '#/checkout') return <CheckoutPage cart={cart} />;
+        if (hash === '#/wishlist') return <WishlistPage wishlist={wishlist} products={ALL_PRODUCTS} toggleWishlist={toggleWishlist} addToCart={addToCart} />;
+        if (hash === '#/search') return <SearchPage query={searchQuery} products={ALL_PRODUCTS} wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} navigate={navigate} />;
+        if (hash === '#/size-guide') return <SizeGuidePage />;
+
+        // Product detail route: #/product/:id
+        const match = hash.match(/^#\/product\/(\d+)$/);
+        if (match) {
+          const prod = ALL_PRODUCTS.find(p => p.id === Number(match[1]));
+          if (prod) return <ProductDetailsPage product={prod} wishlist={wishlist} toggleWishlist={toggleWishlist} addToCart={addToCart} />;
+        }
+
+        // 404
+        return (
+          <div className="page-enter text-center py-24 px-4">
+            <div className="text-6xl mb-4">🕌</div>
+            <h2 className="font-serif text-3xl text-dark-brown font-semibold mb-3">Page Not Found</h2>
+            <a href="#/" className="btn-maroon inline-block px-8 py-3 rounded font-sans mt-4">Back to Home</a>
+          </div>
+        );
+      };
+
+      return (
+        <div className="min-h-screen flex flex-col bg-cream">
+          <Header cart={cart} wishlist={wishlist} navigate={navigate} page={hash} />
+          <main className="flex-1">
+            {renderPage()}
+          </main>
+          <Footer />
+
+          {/* Toasts */}
+          {toasts.slice(-1).map(t => (
+            <Toast key={t.id} message={t.msg} onDone={() => setToasts(ts => ts.filter(x => x.id !== t.id))} />
+          ))}
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
 </body>
+
 </html>
