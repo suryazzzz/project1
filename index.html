@@ -408,9 +408,7 @@ function Header({ cart, wishlist, navigate, page }) {
   return (
     <header className="header-sticky bg-cream border-b border-beige shadow-sm">
       {/* Top strip */}
-      <div className="bg-maroon text-cream text-xs py-1.5 text-center font-sans tracking-wide">
-        🎉 Free Delivery on orders above ₹999 &nbsp;|&nbsp; Festive Collection Now Live!
-      </div>
+      <div className="bg-maroon text-cream text-xs py-1.5 text-center font-sans tracking-wide">✨ Free Delivery on orders above ₹999 &nbsp;|&nbsp; Festive Collection Now Live!</div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 sm:h-20">
@@ -423,10 +421,8 @@ function Header({ cart, wishlist, navigate, page }) {
           </button>
 
           {/* Logo */}
-          <a href="#/" className="flex flex-col items-start leading-tight select-none" onClick={() => setMenuOpen(false)}>
-            <span className="font-serif text-maroon font-bold tracking-widest text-lg sm:text-xl md:text-2xl" style={{letterSpacing:'0.12em'}}>SRITHI</span>
-            <span className="font-sans text-gold text-xs tracking-widest font-light" style={{letterSpacing:'0.22em'}}>THE COUTURE</span>
-            <span className="font-sans text-warm-gray text-xs tracking-wider hidden sm:block" style={{letterSpacing:'0.18em', fontSize:'9px'}}>ELEGANT ETHNIC WEAR</span>
+          <a href="#/" className="flex items-center select-none py-1" onClick={() => setMenuOpen(false)}>
+            <img src="./images/logo.png" alt="SRITHI THE COUTURE" className="h-8 sm:h-11 w-auto object-contain transition-transform hover:scale-105 duration-200" style={{ mixBlendMode: 'multiply' }} />
           </a>
 
           {/* Nav links (desktop) */}
@@ -530,9 +526,9 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
         {/* Brand */}
         <div className="col-span-2 md:col-span-1">
-          <div className="mb-3">
-            <div className="font-serif text-gold font-bold text-xl tracking-widest">SRITHI</div>
-            <div className="font-sans text-beige text-xs tracking-widest">THE COUTURE</div>
+          <div className="mb-4">
+            <img src="./images/logo.png" alt="SRITHI THE COUTURE" className="h-8 sm:h-9 w-auto object-contain mb-2" style={{ filter: 'brightness(0) invert(1)', opacity: 0.95 }} />
+            <div className="font-sans text-gold text-[10px] tracking-[0.25em] font-medium">ELEGANT ETHNIC WEAR</div>
           </div>
           <p className="font-sans text-sm text-warm-gray leading-relaxed mb-4">Premium Indian ethnic wear, exclusively for sarees and salwar suits. Crafted with elegance, delivered with love.</p>
           <div className="flex gap-3">
